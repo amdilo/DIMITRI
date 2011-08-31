@@ -25,6 +25,7 @@
 ;*
 ;* MODIFICATION HISTORY:
 ;*      23 AUG 2011 - C KENT   - DIMITRI-2 V1.0
+;*      30 AUG 2011 - C KENT   - ADDED MANUAL CLOUD SCREENING OUTPUT TO NETCDF
 ;*
 ;* VALIDATION HISTORY:
 ;*      
@@ -47,6 +48,7 @@ FUNCTION GET_DIMITRI_EXTRACT_NCDF_DATA_STRUCTURE,NPROD,NBANDS,VERBOSE=VERBOSE
               ATT_PROCV   : NULL_STR              ,$
               ATT_PRES    : NULL_STR              ,$
               ATT_NBANDS  : NULL_STR              ,$
+              ATT_NDIRS   : NULL_STR              ,$
               ATT_SITEN   : NULL_STR              ,$
               ATT_SITEC   : NULL_STR              ,$
               ATT_SITET   : NULL_STR              ,$
@@ -56,7 +58,8 @@ FUNCTION GET_DIMITRI_EXTRACT_NCDF_DATA_STRUCTURE,NPROD,NBANDS,VERBOSE=VERBOSE
               VAR_PIX     : FLTARR(NBANDS,NPROD)+BAD_VAL  ,$
               VAR_RHOMU   : FLTARR(NBANDS,NPROD)+BAD_VAL  ,$
               VAR_RHOSD   : FLTARR(NBANDS,NPROD)+BAD_VAL  ,$
-              VAR_CLOUD   : FLTARR(NPROD)+BAD_VAL         ,$
+              VAR_CLOUD_AUT   : FLTARR(NPROD)+BAD_VAL         ,$
+              VAR_CLOUD_MAN   : FLTARR(NPROD)+BAD_VAL         ,$
               VAR_VZA     : FLTARR(NPROD)+BAD_VAL         ,$
               VAR_VAA     : FLTARR(NPROD)+BAD_VAL         ,$
               VAR_SZA     : FLTARR(NPROD)+BAD_VAL         ,$

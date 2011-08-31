@@ -26,6 +26,7 @@
 ;* MODIFICATION HISTORY:
 ;*      22 AUG 2011 - C KENT   - DIMITRI-2 V1.0
 ;*      23 AUG 2011 - C KENT   - UPDATED VERBOSE STATUS OUTPUTS
+;*      30 AUG 2011 - C KENT   - ADDED MANUAL CLOUD SCREENING OUTPUT TO NETCDF
 ;*
 ;* VALIDATION HISTORY:
 ;*      
@@ -49,6 +50,7 @@ FUNCTION GET_DIMITRI_EXTRACT_TOA_NCDF_NAMES,VERBOSE=VERBOSE
               ATT_PROCV_TITLE  :'processing_version'                    ,$
               ATT_PRES_TITLE   :'pixel_resolution'                      ,$
               ATT_NBANDS_TITLE :'number_bands'                          ,$
+              ATT_NDIRS_TITLE  :'number_directions'                     ,$
               ATT_SITEN_TITLE  :'site_name'                             ,$
               ATT_SITEC_TITLE  :'site_coordinates'                      ,$
               ATT_SITET_TITLE  :'site_type'                             ,$
@@ -75,8 +77,10 @@ FUNCTION GET_DIMITRI_EXTRACT_TOA_NCDF_NAMES,VERBOSE=VERBOSE
               VAR_RHOMU_LONG :'Mean reflectance over site'        ,$
               VAR_RHOSD_TITLE:'site_stdev'                        ,$
               VAR_RHOSD_LONG :'Standard Deviation of reflectance over site'               ,$
-              VAR_CLOUD_TITLE:'cloud_fraction'                                            ,$
-              VAR_CLOUD_LONG :'Automated cloud screening percentage'                      ,$
+              VAR_CLOUD_TITLE_AUT:'cloud_fraction_auto'                                   ,$
+              VAR_CLOUD_LONG_AUT :'Automated cloud screening percentage'                  ,$
+              VAR_CLOUD_TITLE_MAN:'cloud_fraction_manual'                                 ,$
+              VAR_CLOUD_LONG_MAN :'Manual cloud screening: not performed (-1)/clear(0)/cloudy(1)/suspect(2)'  ,$
               VAR_VZA_TITLE:'mean_viewing_zenith_angle'                                   ,$
               VAR_VZA_LONG :'Average Viewing Zenith Angle over Site'                      ,$
               VAR_VAA_TITLE:'mean_viewing_azimuth_angle'                                  ,$
