@@ -54,7 +54,12 @@ FUNCTION GET_MODISA_DATE_INFO,FILENAME,VERBOSE=VERBOSE
               MONTH :0,$
               DAY   :0,$
               DOY   :0,$
-              DYEAR :DOUBLE(0.0) $
+              DYEAR :DOUBLE(0.0) ,$
+              CMD_DATE   :'',$
+              CMD_TIME   :'',$
+              HOUR  :0,$
+              MINUTE:0,$
+              SECOND:0 $
               }
 
 ;------------------------------------------------
@@ -102,6 +107,11 @@ FUNCTION GET_MODISA_DATE_INFO,FILENAME,VERBOSE=VERBOSE
   TSS = FIX(STRMID(CMD_TIME,6,2))
   TTIME = DOUBLE((THR/(DIY*24.))+(TMM/(DIY*60.*24.))+TSS/(DIY*60.*60.*24.))
 
+  DATE_INFO.HOUR = THR
+  DATE_INFO.MINUTE = TMM
+  DATE_INFO.SECOND = TSS
+  DATE_INFO.CMD_TIME = CMD_TIME
+  DATE_INFO.CMD_DATE = CMD_DATE
   DATE_INFO.DYEAR  = FLOAT(DATE_INFO.YEAR)+(DOUBLE(DATE_INFO.DOY)/DIY)+TTIME
   IF KEYWORD_SET(VERBOSE) THEN PRINT, 'MODISA DATE INFO: DATE RETRIEVAL COMPLETE'
 

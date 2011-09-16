@@ -42,6 +42,7 @@ FUNCTION GET_DIMITRI_EXTRACT_TOA_NCDF_NAMES,VERBOSE=VERBOSE
               DIMBAND_STR:'n_bands'                               ,$
               DIMCHAR_STR:'char_length'                           ,$
               DIMCHAR_VAL:80                                      ,$
+              DIMVIEW_STR:'n_views'                               ,$
               ATT_FNAME_TITLE  :'filename'                              ,$
               ATT_TOOL_TITLE   :'tool'                                  ,$
               ATT_CTIME_TITLE  :'creation_time'                         ,$
