@@ -143,7 +143,7 @@ bi_time = systime()
 
 tregions = ['Amazon','BOUSSOLE','DomeC','Libya','SIO','SPG','TuzGolu','Uyuni']
 tproc = ['Calibration_1']
-years = ['2002','2003','2004','2005','2006','2007','2008','2009','2010','2011']
+years = ['2011']
 
 
 for bb = 0,n_elements(tproc)-1 do begin

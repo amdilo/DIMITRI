@@ -103,8 +103,11 @@ dl = '/'
 ;input_folder = 'Z:\DIMITRI_code\DIMITRI_2.0\Input\'
 ;output_folder= 'R:\MEREMSII\DIMITRI_2.0\Input\'
 
-input_folder = '/mnt/Demitri/DIMITRI_code/DIMITRI_2.0/Input/'
-output_folder= '/mnt/Projects/MEREMSII/DIMITRI_2.0/Input/'
+;input_folder = '/mnt/Demitri/DIMITRI_code/DIMITRI_2.0/Input/'
+;output_folder= '/mnt/Projects/MEREMSII/DIMITRI_2.0/Input/'
+
+input_folder = '/mnt/USB_drive/DIMITRI/DIMITRI_2.0/Input/'
+output_folder= '/mnt/USB_drive/201109_DIMITRI/DIMITRI_2.0/Input/'
 
 sites = ['Amazon','BOUSSOLE','DomeC','Libya','SIO','SPG','TuzGolu','Uyuni']
 sensors = ['AATSR','ATSR2','MERIS','MERIS','MODISA','PARASOL','VEGETATION']
@@ -120,8 +123,8 @@ for j=0,n_elements(sensors)-1 do begin
   tt = 'Site_'+sites[i]+dl+sensors[j]+dl+'Proc_'+proc_vers[j]+dl
   ifolder = input_folder+tt
   if file_test(ifolder) eq 1 then begin
-    res = file_search(ifolder,string(sensors[j]+'_*'))
-    if res[0] ne '' then for m=0l,n_elements(res)-1 do file_copy,res[m],output_folder+tt 
+    res = file_search(ifolder,string('*'+sensors[j]+'_*'))
+    if res[0] ne '' then for m=0l,n_elements(res)-1 do file_copy,res[m],output_folder+tt,/overwrite 
   endif
 print, 'completed site: ',sites[i],' for sensor: ',sensors[j]
 endfor
