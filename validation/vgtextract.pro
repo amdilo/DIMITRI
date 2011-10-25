@@ -5,23 +5,24 @@ pro vgtextract
 ;define initial parameters
 case strupcase(!version.os_family) of
 'WINDOWS': begin
-base_ofolder = 'C:\Documents and Settings\Christopher\Desktop\test_VGT_extract\'
+base_ofolder = 'E:\VGT_extract\'
 dl = '\'
-base_ifolder = 'Z:\1_Data_Archive\data_tuzgolu\vegetation\'
+base_ifolder = 'E:\VGT_extract\'
 end
 'UNIX':begin
-base_ofolder = '/mnt/V_drive/MEREMSII/vgt_data/amazon_extract/'
+base_ofolder = '/mnt/Projects/MEREMSII/VGT_Data/ESA_Uyuni/VGT_extract/'
 dl = '/'
-base_ifolder = '/mnt/Demitri/1_Data_Archive/data_amazon/vegetation/'
+base_ifolder = '/mnt/USB_drive/uyuni/freeP/v2/'
 end
 endcase
 ;3,0,-58,-55
-icoords      = [3.0         ,        0.0,         -55.0,          -58.0]
-new_geo_str1 = ['   3.000000' ,'   0.000000',' -55.000000',' -58.000000']
-new_geo_str2 = ['+003.000000' ,'+000.000000','-055.000000','-058.000000']
-new_geo_str3 = ['   1.500000' ,' -56.500000','   3.000000','   3.000000']
+icoords      = [-19.0         ,        -21.0,        -66.0,        -69.0]
+new_geo_str1 = [' -19.000000' ,' -21.000000',' -66.000000',' -69.000000']
+new_geo_str2 = ['-019.000000' ,'-021.000000','-066.000000','-069.000000']
+new_geo_str3 = [' -20.000000' ,' -67.500000','   2.000000','   3.000000']
 
 ;search for all files within output folder
+cd,current=cdir
 cd,base_ofolder
 all_files = file_search('*.hdf')
 all_files_short = strmid(all_files,0,22)
@@ -32,7 +33,7 @@ uniq_files_short = all_files_short[uniq(all_files_short,sort(all_files_short))]
 ;loop over each uniq product
 for i=0,n_elements(uniq_files_short)-1 do begin
 
-; create a new folder to keep all the products
+; create a new folder to keep all the products - if it already exists then skip it
 new_folder = base_ofolder+uniq_files_short[i]
 if file_test(new_folder,/directory) eq 1 then goto, skip_extract
 
@@ -224,13 +225,13 @@ free_lun,lun
   file_copy,extract_folder+'0001_RIG.TXT',new_folder+dl+'0001_RIG.TXT',/overwrite
 
 ; find all hdf files and delete
-files_for_deletion = file_search(original_zip_folder,'*.HDF')
+files_for_deletion = file_search(original_zip_folder,'*.hdf')
 for kk=0,n_elements(files_for_deletion)-1 do file_delete,files_for_deletion[kk]
 
 skip_extract:
 
 endfor
-
+print, 'finished'
 ;need to delete unzipped files?
 
 ;
