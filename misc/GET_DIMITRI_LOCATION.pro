@@ -88,7 +88,7 @@ FUNCTION GET_DIMITRI_LOCATION,LOCATION,VERBOSE=VERBOSE
   'OZONE_TRANS'   : RESULT = CENTRAL_FOLDER+'AUX_DATA'+DL+'transmission'+dl+'Transmission_O3.txt'
   'WVAP_TRANS'    : RESULT = CENTRAL_FOLDER+'AUX_DATA'+DL+'transmission'+dl+'Transmission_H2O.txt'
   'GAS_TRANS'     : RESULT = CENTRAL_FOLDER+'AUX_DATA'+DL+'transmission'+dl+'Transmission_O2_trace_gases.txt'
-  'SUM'           : RESULT = CENTRAL_FOLDER+'Bin'+DL+'ME-MAN-ARG-TN-010-DIMITRI_v2.0-SoftwareUserManual_v1.0.pdf'
+  'SUM'           : RESULT = CENTRAL_FOLDER+'Bin'+DL+'ME-MAN-ARG-TN-010-DIMITRI_v2.0-SoftwareUserManual_v1.1.pdf'
   
 ;----------------------
 ; VALUES

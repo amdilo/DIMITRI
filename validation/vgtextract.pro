@@ -10,16 +10,16 @@ dl = '\'
 base_ifolder = 'E:\VGT_extract\'
 end
 'UNIX':begin
-base_ofolder = '/mnt/Projects/MEREMSII/VGT_Data/ESA_Uyuni/VGT_extract/'
+base_ofolder = '/mnt/Projects/MEREMSII/VGT_Data/ESA_Libya4/'
 dl = '/'
-base_ifolder = '/mnt/USB_drive/uyuni/freeP/v2/'
+base_ifolder = '/mnt/USB_drive/lybia/freeP/v2/'
 end
 endcase
 ;3,0,-58,-55
-icoords      = [-19.0         ,        -21.0,        -66.0,        -69.0]
-new_geo_str1 = [' -19.000000' ,' -21.000000',' -66.000000',' -69.000000']
-new_geo_str2 = ['-019.000000' ,'-021.000000','-066.000000','-069.000000']
-new_geo_str3 = [' -20.000000' ,' -67.500000','   2.000000','   3.000000']
+icoords      = [ 29.5         ,         27.5,         24.5,         22.5]
+new_geo_str1 = ['  29.500000' ,'  27.500000','  24.500000','  22.500000']
+new_geo_str2 = ['+029.500000' ,'+027.500000','+024.500000','+022.500000']
+new_geo_str3 = ['  28.500000' ,'  23.500000','   2.000000','   2.000000']
 
 ;search for all files within output folder
 cd,current=cdir
@@ -31,7 +31,9 @@ all_files_short = strmid(all_files,0,22)
 uniq_files_short = all_files_short[uniq(all_files_short,sort(all_files_short))]
 
 ;loop over each uniq product
-for i=0,n_elements(uniq_files_short)-1 do begin
+for i=0l,n_elements(uniq_files_short)-1 do begin
+
+print, '>>>> Iteration : ',strtrim(i,2),' out of ',strtrim(n_elements(uniq_files_short)-1,2)
 
 ; create a new folder to keep all the products - if it already exists then skip it
 new_folder = base_ofolder+uniq_files_short[i]
@@ -44,7 +46,7 @@ file_mkdir,new_folder
 ; move all the extracted products to the new folder
 str = uniq_files_short[i]+'*'
 res = file_search(base_ofolder,str)
-for j=1,n_elements(res)-1 do begin
+for j=1l,n_elements(res)-1 do begin
 temp_file = res[j]
 pos = strpos(temp_file,'ZIP')
 pos2 = strpos(temp_file,'_20',/reverse_search)
@@ -75,6 +77,9 @@ original_geo_location = GET_VEGETATION_LAT_LON(original_log)
 
 lat_row = where(original_geo_location.lat[0,*] lt icoords[0] and original_geo_location.lat[0,*] gt icoords[1])
 lon_col = where(original_geo_location.lon[*,0] lt icoords[2] and original_geo_location.lon[*,0] gt icoords[3])
+
+if lat_row[0] eq -1 or  lon_col[0] eq -1 then goto, no_cord
+
 
 new_lat_indexes = [lat_row[0],lat_row[n_elements(lat_row)-1]]
 new_lon_indexes = [lon_col[0],lon_col[n_elements(lon_col)-1]]
@@ -172,7 +177,7 @@ free_lun,lun
   i_dat = [extract_folder+'0001_AG.HDF',extract_folder+'0001_OG.HDF',extract_folder+'0001_WVG.HDF']
   o_dat = [new_folder+dl+'0001_AG.HDF',new_folder+dl+'0001_OG.HDF',new_folder+dl+'0001_WVG.HDF']
   
-  for jj=0,2 do begin
+  for jj=0l,2 do begin
   hdfid = HDF_SD_START(i_dat[jj], /read)
   sd_id = HDF_SD_SELECT(hdfid,0)
   HDF_SD_GETDATA, sd_id, data
@@ -198,7 +203,7 @@ free_lun,lun
   i_dat = [extract_folder+'0001_SZA.HDF',extract_folder+'0001_SAA.HDF',extract_folder+'0001_VZA.HDF',extract_folder+'0001_VAA.HDF']
   o_dat = [new_folder+dl+'0001_SZA.HDF',new_folder+dl+'0001_SAA.HDF',new_folder+dl+'0001_VZA.HDF',new_folder+dl+'0001_VAA.HDF']
   
-  for jj=0,2 do begin
+  for jj=0l,2 do begin
   
   IF FILE_TEST(O_dat[jj]) EQ 1 THEN FILE_DELETE,O_dat[jj]
   hdfid = HDF_SD_START(i_dat[jj], /read)
@@ -209,13 +214,17 @@ free_lun,lun
   dims = size(data)
 
   interpolated_data = rebin(data,dims(1)*8,dims(2)*8)
-  y_r=8.*ceil((2+new_lat_indexes[1]-new_lat_indexes[0])/8.)
-  x_r=8.*ceil((2+new_lon_indexes[1]-new_lon_indexes[0])/8.)
-  extract_data = interpolated_data[new_lon_indexes[0]:new_lon_indexes[0]+x_r,new_lat_indexes[0]:new_lat_indexes[0]+y_r]
+  y_r=8.*ceil((2+new_lat_indexes[1]-new_lat_indexes[0])/8.) < dims(2)*8-1
+  x_r=8.*ceil((2+new_lon_indexes[1]-new_lon_indexes[0])/8.) < dims(1)*8-1
   
-  rebin_data = congrid(extract_data,x_r/8,y_r/8)
+  TOPVALY = new_lat_indexes[0]+y_r < dims(2)*8-1
+  TOPVALX = new_lon_indexes[0]+x_r < dims(1)*8-1
+  
+  extract_data = interpolated_data[new_lon_indexes[0]:TOPVALX,new_lat_indexes[0]:TOPVALY]
+  
+  rebin_data = congrid(extract_data,(x_r/8)>1,(y_r/8)>1)
   hdfid = HDF_SD_START(o_dat[jj], /create)
-  SD_id = HDF_SD_CREATE(hdfid, 'ANGLES_VALUES',[x_r/8,y_r/8])
+  SD_id = HDF_SD_CREATE(hdfid, 'ANGLES_VALUES',[(x_r/8)>1,(y_r/8)>1])
   HDF_SD_ADDDATA, SD_id, rebin_data 
   HDF_SD_ENDACCESS, sd_id
   HDF_SD_END, hdfid
@@ -223,6 +232,8 @@ free_lun,lun
 
 ; copy the rig file across to new folder
   file_copy,extract_folder+'0001_RIG.TXT',new_folder+dl+'0001_RIG.TXT',/overwrite
+
+no_cord:
 
 ; find all hdf files and delete
 files_for_deletion = file_search(original_zip_folder,'*.hdf')
