@@ -325,7 +325,14 @@ FUNCTION EXTRACT_DOUBLETS,OFOLDER,ED_REGION,SENSOR1,PROC_VER1,SENSOR2,PROC_VER2,
   
   SIZE_S1=SIZE(GD_SENSOR1_DATA)
   SIZE_S2=SIZE(GD_SENSOR2_DATA)
-  
+
+;---------------------------------------  
+; temp code to generate SADE ascii files  
+;  temp = reform(GD_AUX2[*,0],n_elements(GD_AUX2[*,0]))
+;  sensor_data = GD_SENSOR2_DATA
+;  CONVERT_TIMESERIES_TO_SADE,'MERIS_3rd_Reprocessing',SENSOR_DATA,temp,indgen(15),1,'Libya4',[0,0,0,0]
+;---------------------------------------     
+     
 ;---------------------------------------
 ; DEFINE THE NUMBER OF BANDS AND OUTPUT VARIABLES 
 

@@ -203,7 +203,7 @@ free_lun,lun
   i_dat = [extract_folder+'0001_SZA.HDF',extract_folder+'0001_SAA.HDF',extract_folder+'0001_VZA.HDF',extract_folder+'0001_VAA.HDF']
   o_dat = [new_folder+dl+'0001_SZA.HDF',new_folder+dl+'0001_SAA.HDF',new_folder+dl+'0001_VZA.HDF',new_folder+dl+'0001_VAA.HDF']
   
-  for jj=0l,2 do begin
+  for jj=0l,3 do begin
   
   IF FILE_TEST(O_dat[jj]) EQ 1 THEN FILE_DELETE,O_dat[jj]
   hdfid = HDF_SD_START(i_dat[jj], /read)
