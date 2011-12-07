@@ -81,12 +81,12 @@ FUNCTION ROUJEAN_BRDF,OFOLDER,RB_REGION,REF_SENSOR,REF_PROC_VER,BRDF_BIN,NO_PLOT
 ;-------------------------------
 ; CODE TO CHECK FV FOLDERS...
 
-  print,'************************'
-  print,'FOLDER LOCATIONS:
-  print,'RECAL     :',RC_FOLDER
-  print,'ROUJEAN   :',RB_FOLDER
-  print,'PLOTS     :',PT_FOLDER
-  print,'************************'
+;  print,'************************';
+;  print,'FOLDER LOCATIONS
+;  print,'RECAL     :',RC_FOLDER
+;  print,'ROUJEAN   :',RB_FOLDER
+;  print,'PLOTS     :',PT_FOLDER
+;  print,'************************'
 
 ;--------------------------------
 ; CREATE ROUJEAN FOLDER IF IT DOESN'T EXIST

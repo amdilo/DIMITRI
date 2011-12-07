@@ -79,7 +79,7 @@ PRO DHMI_BUTTON_EVENT,EVENT
                           ENDCASE  
                         END
     'ABOUT'           : BEGIN
-                          MSG   = [	'DIMITRI Version 2.0','Release Date: 31/10/2011'              ,$
+                          MSG   = [	'DIMITRI Version 2.0','Release Date: 09/12/2011'              ,$
                                     'IDL 7.0 Or Higher required','___________________',''             ,$
                                     'Email: ','=> Dimitri@argans.co.uk'                  ,$
                                     'Authors:','=> Marc Bouvet (ESA-ESTEC)','=> Chris Kent (ARGANS Ltd)']
