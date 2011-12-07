@@ -78,6 +78,16 @@ FUNCTION ROUJEAN_BRDF,OFOLDER,RB_REGION,REF_SENSOR,REF_PROC_VER,BRDF_BIN,NO_PLOT
   BRDF_LOG  = STRING(RB_FOLDER +'BRDF_LOG_'  +RB_REGION+'_REF_'+REF_SENSOR+'_'+REF_PROC_VER+'.txt')
   UCERT_FILE= STRING(RB_FOLDER +'ROUJEAN_UC_'+RB_REGION+'_REF_'+REF_SENSOR+'_'+REF_PROC_VER+'.dat')
 
+;-------------------------------
+; CODE TO CHECK FV FOLDERS...
+
+  print,'************************'
+  print,'FOLDER LOCATIONS:
+  print,'RECAL     :',RC_FOLDER
+  print,'ROUJEAN   :',RB_FOLDER
+  print,'PLOTS     :',PT_FOLDER
+  print,'************************'
+
 ;--------------------------------
 ; CREATE ROUJEAN FOLDER IF IT DOESN'T EXIST
 

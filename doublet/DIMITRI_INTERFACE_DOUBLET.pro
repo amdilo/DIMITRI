@@ -11,7 +11,8 @@
 ;* CALLING SEQUENCE:
 ;*      RES = DIMITRI_INTERFACE_DOUBLET(OUTPUT_FOLDER,ED_REGION,SENSOR1,PROC_VER1,SENSOR2,$
 ;*                                      PROC_VER2,CHI_THRESHOLD,DAY_OFFSET,CLOUD_PERCENTAGE,$
-;*                                      ROI_PERCENTAGE)      
+;*                                      ROI_PERCENTAGE,VZA_MIN,VZA_MAX,VAA_MIN,VAA_MAX,SZA_MIN,$
+;*					SZA_MAX,SAA_MIN,SAA_MAX)      
 ;* 
 ;* INPUTS:
 ;*      OUTPUT_FOLDER     - THE FULL PATH OF THE OUTPUT FOLDER  

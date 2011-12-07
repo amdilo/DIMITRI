@@ -10,16 +10,16 @@ dl = '\'
 base_ifolder = 'E:\VGT_extract\'
 end
 'UNIX':begin
-base_ofolder = '/mnt/Projects/MEREMSII/VGT_Data/ESA_Libya4/'
+base_ofolder = '/mnt/Projects/MEREMSII/VGT_Data/ESA_BOUSSOLE/'
 dl = '/'
-base_ifolder = '/mnt/USB_drive/lybia/freeP/v2/'
+base_ifolder = '/mnt/USB_drive02/VEGETATION/boussole/freeP/v2/'
 end
 endcase
 ;3,0,-58,-55
-icoords      = [ 29.5         ,         27.5,         24.5,         22.5]
-new_geo_str1 = ['  29.500000' ,'  27.500000','  24.500000','  22.500000']
-new_geo_str2 = ['+029.500000' ,'+027.500000','+024.500000','+022.500000']
-new_geo_str3 = ['  28.500000' ,'  23.500000','   2.000000','   2.000000']
+icoords      = [ 44.45         ,         42.25,         9.0,         6.8]
+new_geo_str1 = ['  44.450000' ,'  42.250000','   9.000000','   6.800000']
+new_geo_str2 = ['+044.450000' ,'+042.250000','+009.000000','+006.800000']
+new_geo_str3 = ['  43.350000' ,'   7.900000','   2.250000','   2.200000']
 
 ;search for all files within output folder
 cd,current=cdir

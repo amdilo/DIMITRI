@@ -7,14 +7,14 @@
 PRO BATCH_EXTRACT_VGT_VAA
 
   STIME = SYSTIME()
-  SITES = ['Amazon','BOUSSOLE','Libya4','TuzGolu','Uyuni']
+  SITES = ['TuzGolu','Amazon'];'BOUSSOLE','Libya4','TuzGolu','Uyuni']
   FOR IS=0,N_ELEMENTS(SITES)-1 DO BEGIN
     SITE = SITES[IS]
     CASE SITE OF
         'Amazon':BEGIN
-                  ICOORDS = [1.33,1.0,-56.5,-57]
-                  IFOLDER = '';THE MAIN FOLDER OF THE VGT ZIP FILES (NOT INCLUDING YEAR/MONTH/DAY BREAKDOWN)
-                  OFOLDER = '/Amazon_extract/';THE LOCATION OF THE OUTPUT FOLDER (SHOULD BE CREATED ALREADY)
+                  ICOORDS = [3.0,0.0,-55.,-58.]
+                  IFOLDER = '/mnt/Demitri/1_Data_Archive/data_amazon/vegetation/';THE MAIN FOLDER OF THE VGT ZIP FILES (NOT INCLUDING YEAR/MONTH/DAY BREAKDOWN)
+                  OFOLDER = '/mnt/Projects/MEREMSII/VGT_data/vaa_extracts/Amazon/';THE LOCATION OF THE OUTPUT FOLDER (SHOULD BE CREATED ALREADY)
                  END
         'BOUSSOLE': BEGIN
                   ICOORDS = [43.45,43.25,8.0,7.8]
@@ -27,9 +27,9 @@ PRO BATCH_EXTRACT_VGT_VAA
                   OFOLDER = '/Libya4_extract/';THE LOCATION OF THE OUTPUT FOLDER (SHOULD BE CREATED ALREADY)
                  END
         'TuzGolu':BEGIN
-                  ICOORDS = [38.80,38.70,33.40,33.25]
-                  IFOLDER = '';THE MAIN FOLDER OF THE VGT ZIP FILES (NOT INCLUDING YEAR/MONTH/DAY BREAKDOWN)
-                  OFOLDER = '/TuzGolu_extract/';THE LOCATION OF THE OUTPUT FOLDER (SHOULD BE CREATED ALREADY)
+                  ICOORDS = [40.,35.,36.,30.]
+                  IFOLDER = '/mnt/Demitri/1_Data_Archive/data_tuzgolu/vegetation/';THE MAIN FOLDER OF THE VGT ZIP FILES (NOT INCLUDING YEAR/MONTH/DAY BREAKDOWN)
+                  OFOLDER = '/mnt/Projects/MEREMSII/VGT_data/vaa_extracts/TuzGolu/';THE LOCATION OF THE OUTPUT FOLDER (SHOULD BE CREATED ALREADY)
                  END
         'Uyuni':BEGIN
                   ICOORDS = [-20.00,-20.16,-67.45,-68.05]
@@ -53,7 +53,7 @@ FUNCTION EXTRACT_VGT_VAA,IFOLDER,OFOLDER,ICOORDS
   DL = PATH_SEP()
   IF STRUPCASE(!VERSION.OS_FAMILY) EQ 'WINDOWS' THEN CMMD = '7z e -aoa ' ELSE CMMD = '7za e -aoa '
 
-  YEARS  = ['2003','2004','2005','2006','2007','2008','2009']
+  YEARS  = ['2002','2003','2004','2005','2006','2007','2008','2009']
   MONTHS = ['01','02','03','04','05','06','07','08','09','10','11','12']
   DAYS   = ['01','02','03','04','05','06','07','08','09','10','11','12',$
             '13','14','15','16','17','18','19','20','21','22','23','24',$
@@ -84,11 +84,12 @@ FUNCTION EXTRACT_VGT_VAA,IFOLDER,OFOLDER,ICOORDS
       ADDNAME = STRMID(ZIPFILES[IZ],0,STRLEN(ZIPFILES[IZ])-4)
       LOGF = '0001_LOG.TXT'
       GEOLOC = GET_VEGETATION_LAT_LON(LOGF)
-    
+    IF geoloc.error EQ -1 THEN GOTO, NEXT_ZIP
+      
       LAT_ROW = WHERE(GEOLOC.LAT LT ICOORDS[0] AND GEOLOC.LAT GT ICOORDS[1])
       LON_COL = WHERE(GEOLOC.LON LT ICOORDS[2] AND GEOLOC.LON GT ICOORDS[3])
       IF LAT_ROW[0] EQ -1 OR  LON_COL[0] EQ -1 THEN GOTO, NEXT_ZIP
-    
+
       IVAA ='0001_VAA.HDF'
       OVAA = OFOLDER+DL+ADDNAME+'_0001_VAA.HDF'
       
@@ -236,6 +237,6 @@ FUNCTION GET_VEGETATION_LAT_LON,LOG_FILE,VERBOSE=VERBOSE
 ;-------------------------------------------
 ; RETURN GEOLOCAITON INFORMATION
 
-  RETURN,{LAT:NEW_GRID_LAT,LON:NEW_GRID_LON}
+  RETURN,{LAT:NEW_GRID_LAT,LON:NEW_GRID_LON,ERROR:0}
 
 END

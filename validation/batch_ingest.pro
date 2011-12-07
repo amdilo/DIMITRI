@@ -4,7 +4,7 @@ pro batch_ingest
 ;batch_ingest_atsr2;
 ;batch_ingest_aatsr
 ;batch_ingest_modisa
-batch_ingest_parasol
+;batch_ingest_parasol
 batch_ingest_vgt
 
 end
@@ -23,8 +23,8 @@ pro batch_ingest_meris
 
 bi_time = systime()
 
-tregions = ['Amazon','BOUSSOLE','DomeC','Libya','SIO','SPG','TuzGolu','Uyuni']
-tproc = ['2nd_Reprocessing','3rd_Reprocessing']
+tregions = ['Libya4']
+tproc = ['2nd_Reprocessing']
 years = ['2002','2003','2004','2005','2006','2007','2008','2009','2010','2011']
 
 for bb = 0,n_elements(tproc)-1 do begin
@@ -45,9 +45,9 @@ pro batch_ingest_parasol
 
 bi_time = systime()
 
-tregions = ['Amazon','BOUSSOLE','DomeC','Libya','SIO','SPG','TuzGolu','Uyuni']
+tregions = ['BOUSSOLE','DomeC','Libya4','SIO','SPG','TuzGolu','Uyuni']
 tproc = ['Calibration_1']
-years = ['2002','2003','2004','2005','2006','2007','2008','2009','2010','2011']
+years = ['2007','2008','2009','2010','2011']
 
 for bb = 0,n_elements(tproc)-1 do begin
 ;bb = 0
@@ -141,9 +141,9 @@ pro batch_ingest_vgt
 
 bi_time = systime()
 
-tregions = ['Amazon','BOUSSOLE','DomeC','Libya','SIO','SPG','TuzGolu','Uyuni']
+tregions = ['Amazon','BOUSSOLE','DomeC','Libya4','SIO','SPG','TuzGolu','Uyuni']
 tproc = ['Calibration_1']
-years = ['2011']
+years = ['2002','2003','2004','2005','2006','2007','2008','2009','2010','2011']
 
 
 for bb = 0,n_elements(tproc)-1 do begin
