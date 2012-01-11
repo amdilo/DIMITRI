@@ -20,6 +20,8 @@ cd,'../vegetation/'
 @compile_vegetation
 cd,'../ingest/'
 @compile_ingest
+cd,'../sade/'
+@compile_sade
 cd,'../doublet/'
 @compile_doublet
 cd,'../intercal/'
