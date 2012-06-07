@@ -27,6 +27,7 @@
 ;*      22 AUG 2011 - C KENT   - DIMITRI-2 V1.0
 ;*      23 AUG 2011 - C KENT   - UPDATED VERBOSE STATUS OUTPUTS
 ;*      30 AUG 2011 - C KENT   - ADDED MANUAL CLOUD SCREENING OUTPUT TO NETCDF
+;*      09 MAR 2012 - C KENT   - ADDED ROI_COVER
 ;*
 ;* VALIDATION HISTORY:
 ;*      
@@ -74,6 +75,8 @@ FUNCTION GET_DIMITRI_EXTRACT_TOA_NCDF_NAMES,VERBOSE=VERBOSE
               VAR_DTIME_LONG :'Product data start decimal time'   ,$
               VAR_PIX_TITLE  :'n_pixels'                          ,$
               VAR_PIX_LONG   :'Number of pixels over Site'        ,$
+              VAR_ROI_TITLE  :'roi_cover'                         ,$
+              VAR_ROI_LONG   :'ROI fully covered'                 ,$
               VAR_RHOMU_TITLE:'site_mean'                         ,$
               VAR_RHOMU_LONG :'Mean reflectance over site'        ,$
               VAR_RHOSD_TITLE:'site_stdev'                        ,$

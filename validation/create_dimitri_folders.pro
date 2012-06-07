@@ -5,18 +5,19 @@ pro create_new_tar
 ;wait,900
 ;print, 'finished waiting to start copying...
 ;move_vgt_jpegs
-move_dimitri_jpegs
 move_dimitri_savs
-
+move_dimitri_jpegs
+;move_dimitri_savs
+move_vgt_jpegs
 end
 
 
 pro create_dimitri_folders
 
-dl = '\'
-input_folder = 'R:\MEREMSII\DIMITRI_2.0\Input'
+dl = '/'
+input_folder = '/mnt/Projects/MEREMSII/DIMITRI/20120413/DIMITRI_2.0/'
 
-sites = ['Amazon','BOUSSOLE','DomeC','Libya','SIO','SPG','TuzGolu','Uyuni']
+sites = ['Amazon','BOUSSOLE','DomeC','Libya4','SIO','SPG','TuzGolu','Uyuni']
 
 sensors = ['AATSR','ATSR2','MERIS','MERIS','MODISA','PARASOL','VEGETATION']
 proc_vers = ['2nd_Reprocessing','Reprocessing_2008','2nd_Reprocessing','3rd_Reprocessing','Collection_5','Calibration_1','Calibration_1']
@@ -24,8 +25,8 @@ years = ['2002','2003','2004','2005','2006','2007','2008','2009','2010','2011']
 
 ;loop over each site
 for i=0,n_elements(sites)-1 do begin
-sf = input_folder+dl+'Site_'+sites[i]
-file_mkdir,input_folder
+sf = input_folder+'Site_'+sites[i]
+file_mkdir,sf;input_folder
 
 ; loop over each sensor
 for j=0,n_elements(sensors)-1 do begin
@@ -57,13 +58,21 @@ dl = '/'
 ;input_folder = 'Z:\DIMITRI_code\DIMITRI_2.0\Input\'
 ;output_folder= 'Z:\temp_data_for_AR\DIMITRI_2.0\Input\' 
 
-input_folder = '/mnt/Demitri/DIMITRI_code/DIMITRI_2.0/Input/'
-output_folder= '/mnt/Projects/MEREMSII/DIMITRI_2.0/Input/'
+input_folder = '/mnt/Projects/MEREMSII/DIMITRI/20120305/DIMITRI_2.0/Input/';'/mnt/Demitri/DIMITRI_code/DIMITRI_2.0/Input/'
+output_folder= '/mnt/Projects/MEREMSII/DIMITRI/20120413/DIMITRI_2.0/Input/';'/mnt/Projects/MEREMSII/DIMITRI_2.0/Input/'
+;'/mnt/Projects/MEREMSII/DIMITRI/20120413/DIMITRI_2.0/Input/'
+;'/mnt/Projects/MEREMSII/DIMITRI/20120305/DIMITRI_2.0/Input/'
 
-sites = ['SIO']
-sensors = ['PARASOL']
-proc_vers = ['Calibration_1']
+;sites = ['SIO']
+;sensors = ['PARASOL']
+;proc_vers = ['Calibration_1']
+;years = ['2002','2003','2004','2005','2006','2007','2008','2009','2010','2011']
+
+sites = ['Amazon','BOUSSOLE','DomeC','Libya4','SIO','SPG','TuzGolu','Uyuni']
+sensors = ['AATSR','ATSR2','MERIS','MERIS','MODISA','PARASOL']
+proc_vers = ['2nd_Reprocessing','Reprocessing_2008','2nd_Reprocessing','3rd_Reprocessing','Collection_5','Calibration_1']
 years = ['2002','2003','2004','2005','2006','2007','2008','2009','2010','2011']
+
 
 counter = double(0.0)
 
@@ -106,10 +115,15 @@ dl = '/'
 ;input_folder = '/mnt/Demitri/DIMITRI_code/DIMITRI_2.0/Input/'
 ;output_folder= '/mnt/Projects/MEREMSII/DIMITRI_2.0/Input/'
 
-input_folder = '/mnt/USB_drive/DIMITRI/DIMITRI_2.0/Input/'
-output_folder= '/mnt/USB_drive/201109_DIMITRI/DIMITRI_2.0/Input/'
+;input_folder = '/mnt/USB_drive/DIMITRI/DIMITRI_2.0/Input/'
+;output_folder= '/mnt/Projects/MEREMSII/DIMITRI_2.0/Input/'
+input_folder = '/mnt/Projects/MEREMSII/DIMITRI/20120305/DIMITRI_2.0/Input/';'/mnt/Demitri/DIMITRI_code/DIMITRI_2.0/Input/'
+output_folder= '/mnt/Projects/MEREMSII/DIMITRI/20120413/DIMITRI_2.0/Input/';'/mnt/Projects/MEREMSII/DIMITRI_2.0/Input/'
 
-sites = ['Amazon','BOUSSOLE','DomeC','Libya','SIO','SPG','TuzGolu','Uyuni']
+;sites = ['Amazon','BOUSSOLE','DomeC','Libya','SIO','SPG','TuzGolu','Uyuni']
+;sensors = ['AATSR','ATSR2','MERIS','MERIS','MODISA','PARASOL','VEGETATION']
+;proc_vers = ['2nd_Reprocessing','Reprocessing_2008','2nd_Reprocessing','3rd_Reprocessing','Collection_5','Calibration_1','Calibration_1']
+sites = ['Amazon','BOUSSOLE','DomeC','Libya4','SIO','SPG','TuzGolu','Uyuni']
 sensors = ['AATSR','ATSR2','MERIS','MERIS','MODISA','PARASOL','VEGETATION']
 proc_vers = ['2nd_Reprocessing','Reprocessing_2008','2nd_Reprocessing','3rd_Reprocessing','Collection_5','Calibration_1','Calibration_1']
 
@@ -144,10 +158,13 @@ dl = '/'
 ;input_folder = '/mnt/Demitri/DIMITRI_code/DIMITRI_2.0/Input/'
 ;output_folder= '/mnt/Demitri/DIMITRI_tar_dist/DIMITRI_2.0/Input/'
 
-input_folder = 'Z:\DIMITRI_code\DIMITRI_2.0\Input\'
-output_folder= 'R:\MEREMSII\DIMITRI_2.0\Input\'
+;input_folder = '/mnt/USB_drive/DIMITRI/DIMITRI_2.0/Input/'
+;output_folder= '/mnt/Projects/MEREMSII/DIMITRI_2.0/Input/'
+input_folder = '/mnt/Projects/MEREMSII/DIMITRI/20120305/DIMITRI_2.0/Input/';'/mnt/Demitri/DIMITRI_code/DIMITRI_2.0/Input/'
+output_folder= '/mnt/Projects/MEREMSII/DIMITRI/20120413/DIMITRI_2.0/Input/';'/mnt/Projects/MEREMSII/DIMITRI_2.0/Input/'
 
-sites = ['Amazon','BOUSSOLE','DomeC','Libya','SIO','SPG','TuzGolu','Uyuni']
+;sites = ['Libya4']
+sites = ['Amazon','BOUSSOLE','DomeC','Libya4','SIO','SPG','TuzGolu','Uyuni']
 sensors = ['VEGETATION']
 proc_vers = ['Calibration_1']
 years = ['2002','2003','2004','2005','2006','2007','2008','2009','2010','2011']

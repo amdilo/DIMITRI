@@ -9,6 +9,7 @@
 .rnew LEGEND.pro
 .rnew GET_ENDIAN_SIZE.pro
 .rnew GREAT_CIRCLE_DISTANCE.pro 
+.rnew CHECK_ROI_COVERAGE.pro
 .rnew TIMESTR_TO_JULDAY.pro
 .rnew JULDAY_TO_TIMESTR.pro 
 .rnew MPCURVEFIT.pro 

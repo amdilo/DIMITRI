@@ -36,7 +36,7 @@ FUNCTION GET_PARASOL_VIEWING_GEOMETRIES,PNAME,ICOORDS,SITE
 ;--------------------------
 ; FIND THE DATA PRODUCT
 
-  IFOLDER = '/mnt/USB_drive/DIMITRI/DIMITRI_2.0/Input/'
+  IFOLDER = get_dimitri_location('INPUT');'/mnt/USB_drive/DIMITRI/DIMITRI_2.0/Input/'
   DL=PATH_SEP()
   FF = IFOLDER+'Site_'+SITE+DL+'PARASOL'+DL+'Proc_Calibration_1'+DL
   NAME = FILE_SEARCH(FF,PNAME)

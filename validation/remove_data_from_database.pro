@@ -7,17 +7,17 @@ pro remove_data_from_database
 
 
 ;--------------------------
-; LOAD THE DATABASE INTO A COMMON BLOCK
+; LOAD THE DATABASE 
 
   DB_FILE = GET_DIMITRI_LOCATION('DATABASE')
   DB_TEMPLATE = GET_DIMITRI_TEMPLATE(1,/TEMPLATE)
   DHMI_DB_DATA = READ_ASCII(DB_FILE,TEMPLATE=DB_TEMPLATE)
   
-  res = where(DHMI_DB_DATA.sensor ne 'MERIS' and DHMI_DB_DATA.sensor ne 'MODISA',count)
+  res = where(DHMI_DB_DATA.sensor ne 'VEGETATION',count)
   new_db_data = GET_DIMITRI_TEMPLATE(count,/db)
   num_tags = n_tags(new_db_data)
    
-  for i=0,num_tags-1 do  new_db_data.(i)[*] = DHMI_DB_DATA.(i)[res]
+  for i=0l,num_tags-1l do  new_db_data.(i)[*] = DHMI_DB_DATA.(i)[res]
   
   res = SAVE_DIMITRI_DATABASE(new_db_data)
   

@@ -27,6 +27,7 @@
 ;*      21 MAR 2011 - C KENT   - MODIFIED FILE DEFINITION TO USE GET_DIMITRI_LOCATION
 ;*      06 JUL 2011 - C KENT   - ADDED INFO WIDGET WARNING USERS OF SAVING PROCESS
 ;*      30 AUG 2011 - C KENT   - MODIFIED DATABASE SAVING SECTION FOR OPTIMISED PERFORMANCE
+;*      08 MAR 2012 - C KENT   - UPDATED BACKUP FILENAME, ADDED ROI_COVER
 ;*
 ;* VALIDATION HISTORY:
 ;*      12 APR 2011 - C KENT   - LINUX 64-BIT IDL 8.0 & WINDOWS 32-BIT IDL 7.1: NOMINAL 
@@ -70,7 +71,8 @@ FUNCTION SAVE_DIMITRI_DATABASE,DB_DATA,VERBOSE=VERBOSE
   DB_BACKUP   = GET_DIMITRI_LOCATION('DB_BACKUP')
   DIMITRI_DB  = GET_DIMITRI_LOCATION('DATABASE')
   RES         = SYSTIME(/UTC)
-  BKUP_DB     = DB_BACKUP+DL+STRMID(RES,8,2)+'_'+STRMID(RES,4,3)+'_'+STRMID(RES,20,4)+'_DIMITRI_DATABASE.CSV'
+  DY          = FIX(STRMID(RES,8,2)) LT 10 ? '0'+STRMID(RES,8,2) : STRMID(RES,8,2)
+  BKUP_DB     = DB_BACKUP+DL+DY+'_'+STRUPCASE(STRMID(RES,4,3))+'_'+STRMID(RES,20,4)+'_DIMITRI_DATABASE.CSV'
 
 ;----------------------
 ; CREATE BACKUP FOLDER IF 
@@ -96,15 +98,42 @@ FUNCTION SAVE_DIMITRI_DATABASE,DB_DATA,VERBOSE=VERBOSE
 ; OPEN THE DATABASE AND APPEND DATA
 
   IF KEYWORD_SET(VERBOSE) THEN PRINT, 'DIMITRI DATABASE SAVE: PRINTING DATA'  
-  DBI = TRANSPOSE([                                                                                                 $
-                    [STRING(DB_DATA.(0))],  [STRING(DB_DATA.(1))],  [STRING(DB_DATA.(2))],  [STRING(DB_DATA.(3))]   ,$
-                    [STRING(DB_DATA.(4))],  [STRING(DB_DATA.(5))],  [STRING(DB_DATA.(6))],  [STRING(DB_DATA.(7))]   ,$
-                    [STRING(DB_DATA.(8))],  [STRING(DB_DATA.(9))],  [STRING(DB_DATA.(10))], [STRING(DB_DATA.(11))]  ,$
-                    [STRING(DB_DATA.(12))], [STRING(DB_DATA.(13))], [STRING(DB_DATA.(14))], [STRING(DB_DATA.(15))]  ,$
-                    [STRING(DB_DATA.(16))], [STRING(DB_DATA.(17))], [STRING(DB_DATA.(18))], [STRING(DB_DATA.(19))]  ,$
-                    [STRING(DB_DATA.(20))], [STRING(DB_DATA.(21))], [STRING(DB_DATA.(22))]                          $                      
-                  ]) 
-  PRINTF,DB_LUN,DBI,FORMAT='(22(A,1H;),A)'
+;  DBI = TRANSPOSE([                                                                                                 $
+;                    [STRING(DB_DATA.(0))],  [STRING(DB_DATA.(1))],  [STRING(DB_DATA.(2))],  [STRING(DB_DATA.(3))]   ,$
+;                    [STRING(DB_DATA.(4))],  [STRING(DB_DATA.(5))],  [STRING(DB_DATA.(6))],  [STRING(DB_DATA.(7))]   ,$
+;                    [STRING(DB_DATA.(8))],  [STRING(DB_DATA.(9))],  [STRING(DB_DATA.(10))], [STRING(DB_DATA.(11))]  ,$
+;                    [STRING(DB_DATA.(12))], [STRING(DB_DATA.(13))], [STRING(DB_DATA.(14))], [STRING(DB_DATA.(15))]  ,$
+;                    [STRING(DB_DATA.(16))], [STRING(DB_DATA.(17))], [STRING(DB_DATA.(18))], [STRING(DB_DATA.(19))]  ,$
+;                    [STRING(DB_DATA.(20))], [STRING(DB_DATA.(21))], [STRING(DB_DATA.(22))], [STRING(DB_DATA.(23))]   $                      
+;                  ]) 
+;  PRINTF,DB_LUN,DBI,FORMAT='(23(A,1H;),A)'
+  FOR DBI = 0L,DB_ITER-1 DO BEGIN
+    PRINTF,DB_LUN,FORMAT=DB_FORMAT,$
+      DB_DATA.DIMITRI_DATE[DBI],$
+      DB_DATA.REGION[DBI],$
+      DB_DATA.SENSOR[DBI],$
+      DB_DATA.PROCESSING_VERSION[DBI],$
+      DB_DATA.YEAR[DBI],$
+      DB_DATA.MONTH[DBI],$
+      DB_DATA.DAY[DBI],$
+      DB_DATA.DOY[DBI],$
+      DB_DATA.DECIMAL_YEAR[DBI],$
+      DB_DATA.FILENAME[DBI],$
+      DB_DATA.ROI_COVER[DBI],$
+      DB_DATA.NUM_ROI_PX[DBI],$
+      DB_DATA.AUTO_CS[DBI],$
+      DB_DATA.MANUAL_CS[DBI],$
+      DB_DATA.AUX_DATA_1[DBI],$
+      DB_DATA.AUX_DATA_2[DBI],$
+      DB_DATA.AUX_DATA_3[DBI],$
+      DB_DATA.AUX_DATA_4[DBI],$
+      DB_DATA.AUX_DATA_5[DBI],$
+      DB_DATA.AUX_DATA_6[DBI],$
+      DB_DATA.AUX_DATA_7[DBI],$
+      DB_DATA.AUX_DATA_8[DBI],$
+      DB_DATA.AUX_DATA_9[DBI],$
+      DB_DATA.AUX_DATA_10[DBI]
+  ENDFOR
 
 ;----------------------
 ; CLOSE THE DATABASE FILE AND RETURN NOMINAL STATUS

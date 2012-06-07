@@ -17,10 +17,10 @@ PRO DIMITRI_SADE_INTERFACE_ROUTINES_P2
 ;----------------------------
 ; SET UP PARAMETERS - TO BE CHANGED
 
-  MAIN_DIR          = '/mnt/Projects/MEREMSII/DIMITRI_2.0/'; FULL PATH OF THE MAIN DIMITRI DIRECTORY
-  MFOLDER           = filepath('',root_dir = MAIN_DIR, subdir=['Output','CK_TEST_M1']) ; FULL PATH OF THE OUTPUT FOLDER WITH MERIS AS REFERENCE
-  AFOLDER           = filepath('',root_dir = MAIN_DIR, subdir=['Output','CK_TEST_A1']) ; FULL PATH OF THE OUTPUT FOLDER WITH AATSR AS REFERENCE
-  REGION            = 'Libya4'                           
+  MAIN_DIR          = GET_DIMITRI_LOCATION('DIMITRI'); FULL PATH OF THE MAIN DIMITRI DIRECTORY
+  MFOLDER           = filepath('',root_dir = MAIN_DIR, subdir=['Output','VGT_TEST_2']) ; FULL PATH OF THE OUTPUT FOLDER WITH MERIS AS REFERENCE
+  AFOLDER           = filepath('',root_dir = MAIN_DIR, subdir=['Output','VGT_TEST_2']) ; FULL PATH OF THE OUTPUT FOLDER WITH AATSR AS REFERENCE
+  REGION            = 'Niger2'                           
   VZA_MIN           = 0.                                  ; VZA MIN ANGLE (DEGREES)
   VZA_MAX           = 90.                                 ; VZA MAX ANGLE (DEGREES)
   VAA_MIN           = 0.                                  ; VAA MIN ANGLE (DEGREES)
@@ -29,8 +29,8 @@ PRO DIMITRI_SADE_INTERFACE_ROUTINES_P2
   SZA_MAX           = 90.                                 ; SZA MAX ANGLE (DEGREES)
   SAA_MIN           = 0.                                  ; SAA MIN ANGLE (DEGREES)
   SAA_MAX           = 360.                                ; SAA MAX ANGLE (DEGREES)  
-  SADE_DIR          = '/mnt/Projects/MEREMSII/WG_Reference_Dataset/distributable_files/' ;change this to the location of your sade files (note, region subdirectory in filepath below
-  NO_PLOTS          = 1 ; 1 MEANS NO BRDF PLOTS (TAKES AWHILE) WILL BE GENERATED
+  SADE_DIR          = '/mnt/Projects/MEREMSII/WG_Reference_Dataset_2/distributable_files/' ;change this to the location of your sade files (note, region subdirectory in filepath below
+  NO_PLOTS          = 1 ; 1 MEANS NO BRDF PLOTS (WHICH TAKE AWHILE) WILL BE GENERATED
   BRDF_BIN          = 5 ; BINNING PERIOD FOR BRDF MODEL IN DAYS
   BRDF_LIM          = 3 ; MINIMUM NUMBER OF ACQUISITIONS FOR A BRDF MODEL
 
@@ -56,7 +56,7 @@ PRO DIMITRI_SADE_INTERFACE_ROUTINES_P2
   
     IF RES[0] NE 1 THEN BEGIN
       PRINT, '******* ERROR, A PROBLEM OCCURED DURING BRDF COMPUTATION ********'
-      RETURN
+     ; RETURN
     ENDIF
 
   ENDFOR ;END OF LOOP ON BRDF FOR MERIS AND AATSR
