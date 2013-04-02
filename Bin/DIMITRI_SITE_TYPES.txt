@@ -1,0 +1,7 @@
+SITE_TYPES
+Ocean
+Forest
+Salt
+Desert
+Ice
+Other

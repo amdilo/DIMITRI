@@ -1,0 +1,771 @@
+<?xml version="1.0"?>
+<CalSites>
+
+	<calsite>
+		<name>ClimSPac1</name>
+		<type>RAYLEIGH</type>
+		<roi_nw>-130.000,-21.0000</roi_nw>
+		<roi_ne>-89.0000,-21.0000</roi_ne>
+		<roi_se>-89.0000,-45.0000</roi_se>
+		<roi_sw>-130.000,-45.0000</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>ClimNPac1</name>
+		<type>RAYLEIGH</type>
+		<roi_nw>139.500,23.0000</roi_nw>
+		<roi_ne>166.000,23.0000</roi_ne>
+		<roi_se>166.000,10.0000</roi_se>
+		<roi_sw>139.500,10.0000</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>ClimNPac2</name>
+		<type>RAYLEIGH</type>
+		<roi_nw>-180.000,23.5000</roi_nw>
+		<roi_ne>-159.000,23.5000</roi_ne>
+		<roi_se>-159.000,15.0000</roi_se>
+		<roi_sw>-180.000,15.0000</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>ClimNAtl1</name>
+		<type>RAYLEIGH</type>
+		<roi_nw>-62.5000,27.0000</roi_nw>
+		<roi_ne>-44.0000,27.0000</roi_ne>
+		<roi_se>-44.0000,17.0000</roi_se>
+		<roi_sw>-62.5000,17.0000</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>ClimSAtl1</name>
+		<type>RAYLEIGH</type>
+		<roi_nw>-32.5000,-10.0000</roi_nw>
+		<roi_ne>-11.0000,-10.0000</roi_ne>
+		<roi_se>-11.0000,-20.0000</roi_se>
+		<roi_sw>-32.5000,-20.0000</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>ClimInd1</name>
+		<type>RAYLEIGH</type>
+		<roi_nw>89.5000,-21.0000</roi_nw>
+		<roi_ne>100.000,-21.0000</roi_ne>
+		<roi_se>100.000,-30.0000</roi_se>
+		<roi_sw>89.5000,-30.0000</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>ClimMadag</name>
+		<type>RAYLEIGH</type>
+		<roi_nw>=54.0000,-26.0000</roi_nw>
+		<roi_ne>75.0000,-26.0000</roi_ne>
+		<roi_se>75.0000,-31.5000</roi_se>
+		<roi_sw>54.0000,-31.5000</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>ClimSAustra</name>
+		<type>RAYLEIGH</type>
+		<roi_nw>127.000,-39.0000</roi_nw>
+		<roi_ne>133.000,-39.0000</roi_ne>
+		<roi_se>133.000,-43.0000</roi_se>
+		<roi_sw>127.000,-43.0000</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>ClimMoby</name>
+		<type>RAYLEIGH</type>
+		<roi_nw>-159.000,20.0000</roi_nw>
+		<roi_ne>-156.500,20.0000</roi_ne>
+		<roi_se>-156.500,18.0000</roi_se>
+		<roi_sw>-159.000,18.0000</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>ClimGAlaska</name>
+		<type>RAYLEIGH</type>
+		<roi_nw>-145.000,47.0000</roi_nw>
+		<roi_ne>-138.000,47.0000</roi_ne>
+		<roi_se>-138.000,43.0000</roi_se>
+		<roi_sw>-145.000,43.0000</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>ClimDomeCR</name>
+		<type>RAYLEIGH</type>
+		<roi_nw>-120.000,18.5000</roi_nw>
+		<roi_ne>-108.000,18.5000</roi_ne>
+		<roi_se>-108.000,13.0000</roi_se>
+		<roi_sw>-120.000,13.0000</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>ClimGYucat</name>
+		<type>RAYLEIGH</type>
+		<roi_nw>-85.0000,20.0000</roi_nw>
+		<roi_ne>-80.0000,20.0000</roi_ne>
+		<roi_se>-80.0000,17.0000</roi_se>
+		<roi_sw>-85.0000,17.0000</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>ClimGMex</name>
+		<type>RAYLEIGH</type>
+		<roi_nw>-94.0000,26.0000</roi_nw>
+		<roi_ne>-86.0000,26.0000</roi_ne>
+		<roi_se>-86.0000,22.0000</roi_se>
+		<roi_sw>-94.0000,22.0000</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>ClimSPac1</name>
+		<type>GLITTER</type>
+		<roi_nw>-130.000,-21.0000</roi_nw>
+		<roi_ne>-89.0000,-21.0000</roi_ne>
+		<roi_se>-89.0000,-45.0000</roi_se>
+		<roi_sw>-130.000,-45.0000</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>ClimNPac1</name>
+		<type>GLITTER</type>
+		<roi_nw>139.500,23.0000</roi_nw>
+		<roi_ne>166.000,23.0000</roi_ne>
+		<roi_se>166.000,10.0000</roi_se>
+		<roi_sw>139.500,10.0000</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>ClimNPac2</name>
+		<type>GLITTER</type>
+		<roi_nw>-180.000,23.5000</roi_nw>
+		<roi_ne>-159.000,23.5000</roi_ne>
+		<roi_se>-159.000,15.0000</roi_se>
+		<roi_sw>-180.000,15.0000</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>ClimNAtl1</name>
+		<type>GLITTER</type>
+		<roi_nw>-62.5000,27.0000</roi_nw>
+		<roi_ne>-44.0000,27.0000</roi_ne>
+		<roi_se>-44.0000,17.0000</roi_se>
+		<roi_sw>-62.5000,17.0000</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>ClimSAtl1</name>
+		<type>GLITTER</type>
+		<roi_nw>-32.5000,-10.0000</roi_nw>
+		<roi_ne>-11.0000,-10.0000</roi_ne>
+		<roi_se>-11.0000,-20.0000</roi_se>
+		<roi_sw>-32.5000,-20.0000</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>ClimInd1</name>
+		<type>GLITTER</type>
+		<roi_nw>89.5000,-21.0000</roi_nw>
+		<roi_ne>100.000,-21.0000</roi_ne>
+		<roi_se>100.000,-30.0000</roi_se>
+		<roi_sw>89.5000,-30.0000</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>ClimMadag</name>
+		<type>GLITTER</type>
+		<roi_nw>54.0000,-26.0000</roi_nw>
+		<roi_ne>75.0000,-26.0000</roi_ne>
+		<roi_se>75.0000,-31.5000</roi_se>
+		<roi_sw>54.0000,-31.5000</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>ClimSAustra</name>
+		<type>GLITTER</type>
+		<roi_nw>127.000,-39.0000</roi_nw>
+		<roi_ne>133.000,-39.0000</roi_ne>
+		<roi_se>133.000,-43.0000</roi_se>
+		<roi_sw>127.000,-43.0000</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>ClimMoby</name>
+		<type>GLITTER</type>
+		<roi_nw>-159.000,20.0000</roi_nw>
+		<roi_ne>-156.500,20.0000</roi_ne>
+		<roi_se>-156.500,18.0000</roi_se>
+		<roi_sw>-159.000,18.0000</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>ClimGAlaska</name>
+		<type>GLITTER</type>
+		<roi_nw>-145.000,47.0000</roi_nw>
+		<roi_ne>-138.000,47.0000</roi_ne>
+		<roi_se>-138.000,43.0000</roi_se>
+		<roi_sw>-145.000,43.0000</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>ClimDomeCR</name>
+		<type>GLITTER</type>
+		<roi_nw>-120.000,18.5000</roi_nw>
+		<roi_ne>-108.000,18.5000</roi_ne>
+		<roi_se>-108.000,13.0000</roi_se>
+		<roi_sw>-120.000,13.0000</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>ClimGYucat</name>
+		<type>GLITTER</type>
+		<roi_nw>-85.0000,20.0000</roi_nw>
+		<roi_ne>-80.0000,20.0000</roi_ne>
+		<roi_se>-80.0000,17.0000</roi_se>
+		<roi_sw>-85.0000,17.0000</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>ClimGMex</name>
+		<type>GLITTER</type>
+		<roi_nw>-94.0000,26.0000</roi_nw>
+		<roi_ne>-86.0000,26.0000</roi_ne>
+		<roi_se>-86.0000,22.0000</roi_se>
+		<roi_sw>-94.0000,22.0000</roi_sw>
+	</calsite>
+
+
+	<calsite>
+		<name>Algeria1</name>
+		<type>DESERT</type>
+		<roi_nw>-0.900000,24.3000</roi_nw>
+		<roi_ne>0.100000,24.3000</roi_ne>
+		<roi_se>0.100000,23.3000</roi_se>
+		<roi_sw>-0.900000,23.3000</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Algeria2</name>
+		<type>DESERT</type>
+		<roi_nw>-1.88000,26.5900</roi_nw>
+		<roi_ne>-0.880000,26.5900</roi_ne>
+		<roi_se>-0.880000,25.5900</roi_se>
+		<roi_sw>-1.88000,25.5900</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Algeria3</name>
+		<type>DESERT</type>
+		<roi_nw>7.16000,30.8200</roi_nw>
+		<roi_ne>8.16000,30.8200</roi_ne>
+		<roi_se>8.16000,29.8200</roi_se>
+		<roi_sw>7.16000,29.8200</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Algeria4</name>
+		<type>DESERT</type>
+		<roi_nw>5.09000,30.5400</roi_nw>
+		<roi_ne>6.09000,30.5400</roi_ne>
+		<roi_se>6.09000,29.5400</roi_se>
+		<roi_sw>5.09000,29.5400</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Algeria5</name>
+		<type>DESERT</type>
+		<roi_nw>1.73000,31.5200</roi_nw>
+		<roi_ne>2.73000,31.5200</roi_ne>
+		<roi_se>2.73000,30.5200</roi_se>
+		<roi_sw>1.73000,30.5200</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Arabia1</name>
+		<type>DESERT</type>
+		<roi_nw>46.2600,19.3800</roi_nw>
+		<roi_ne>47.2600,19.3800</roi_ne>
+		<roi_se>47.2600,18.3800</roi_se>
+		<roi_sw>46.2600,18.3800</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Arabia2</name>
+		<type>DESERT</type>
+		<roi_nw>50.4600,20.6300</roi_nw>
+		<roi_ne>51.4600,20.6300</roi_ne>
+		<roi_se>51.4600,19.6300</roi_se>
+		<roi_sw>50.4600,19.6300</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Arabia3</name>
+		<type>DESERT</type>
+		<roi_nw>43.2300,29.4200</roi_nw>
+		<roi_ne>44.2300,29.4200</roi_ne>
+		<roi_se>44.2300,28.4200</roi_se>
+		<roi_sw>43.2300,28.4200</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Sudan1</name>
+		<type>DESERT</type>
+		<roi_nw>27.7200,22.2400</roi_nw>
+		<roi_ne>28.7200,22.2400</roi_ne>
+		<roi_se>28.7200,21.2400</roi_se>
+		<roi_sw>27.7200,21.2400</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Niger1</name>
+		<type>DESERT</type>
+		<roi_nw>9.31000,20.1700</roi_nw>
+		<roi_ne>10.3100,20.1700</roi_ne>
+		<roi_se>10.3100,19.1700</roi_se>
+		<roi_sw>9.31000,19.1700</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Niger2</name>
+		<type>DESERT</type>
+		<roi_nw>10.0900,21.8700</roi_nw>
+		<roi_ne>11.0900,21.8700</roi_ne>
+		<roi_se>11.0900,20.8700</roi_se>
+		<roi_sw>10.0900,20.8700</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Niger3</name>
+		<type>DESERT</type>
+		<roi_nw>7.46000,22.0700</roi_nw>
+		<roi_ne>8.46000,22.0700</roi_ne>
+		<roi_se>8.46000,21.0700</roi_se>
+		<roi_sw>7.46000,21.0700</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Egypt1</name>
+		<type>DESERT</type>
+		<roi_nw>25.6000,27.6200</roi_nw>
+		<roi_ne>26.6000,27.6200</roi_ne>
+		<roi_se>26.6000,26.6200</roi_se>
+		<roi_sw>25.6000,26.6200</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Libya1</name>
+		<type>DESERT</type>
+		<roi_nw>12.8500,24.9200</roi_nw>
+		<roi_ne>13.8500,24.9200</roi_ne>
+		<roi_se>13.8500,23.9200</roi_se>
+		<roi_sw>12.8500,23.9200</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Libya2</name>
+		<type>DESERT</type>
+		<roi_nw>19.9800,25.5500</roi_nw>
+		<roi_ne>20.9800,25.5500</roi_ne>
+		<roi_se>20.9800,24.5500</roi_se>
+		<roi_sw>19.9800,24.5500</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Libya3</name>
+		<type>DESERT</type>
+		<roi_nw>22.6000,23.6500</roi_nw>
+		<roi_ne>23.6000,23.6500</roi_ne>
+		<roi_se>23.6000,22.6500</roi_se>
+		<roi_sw>22.6000,22.6500</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Libya4</name>
+		<type>DESERT</type>
+		<roi_nw>22.8900,29.0500</roi_nw>
+		<roi_ne>23.8900,29.0500</roi_ne>
+		<roi_se>23.8900,28.0500</roi_se>
+		<roi_sw>22.8900,28.0500</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Mali1</name>
+		<type>DESERT</type>
+		<roi_nw>-5.35000,19.6200</roi_nw>
+		<roi_ne>-4.35000,19.6200</roi_ne>
+		<roi_se>-4.35000,18.6200</roi_se>
+		<roi_sw>-5.35000,18.6200</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Mauritania1</name>
+		<type>DESERT</type>
+		<roi_nw>-9.80000,19.9000</roi_nw>
+		<roi_ne>-8.80000,19.9000</roi_ne>
+		<roi_se>-8.80000,18.9000</roi_se>
+		<roi_sw>-9.80000,18.9000</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Mauritania2</name>
+		<type>DESERT</type>
+		<roi_nw>-9.28000,21.3500</roi_nw>
+		<roi_ne>-8.28000,21.3500</roi_ne>
+		<roi_se>-8.28000,20.3500</roi_se>
+		<roi_sw>-9.28000,20.3500</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Dunhuang</name>
+		<type>DESERT</type>
+		<roi_nw>93.655,40.595</roi_nw>
+		<roi_ne>94.655,40.595</roi_ne>
+		<roi_se>94.655,39.595</roi_se>
+		<roi_sw>93.655,39.595</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Sonora</name>
+		<type>DESERT</type>
+		<roi_nw>-114.36,32.3</roi_nw>
+		<roi_ne>-113.36,32.3</roi_ne>
+		<roi_se>-113.36,31.3</roi_se>
+		<roi_sw>-114.36,31.3</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Amburla</name>
+		<type>DESERT</type>
+		<roi_nw>132.619,-22.785</roi_nw>
+		<roi_ne>133.619,-22.785</roi_ne>
+		<roi_se>133.619,-23.785</roi_se>
+		<roi_sw>132.619,-23.785</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Thangoo</name>
+		<type>DESERT</type>
+		<roi_nw>121.76,-17.6</roi_nw>
+		<roi_ne>122.76,-17.6</roi_ne>
+		<roi_se>122.76,-18.6</roi_se>
+		<roi_sw>121.76,-18.6</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Hay</name>
+		<type>DESERT</type>
+		<roi_nw>144.79,-33.88</roi_nw>
+		<roi_ne>145.79,-33.88</roi_ne>
+		<roi_se>145.79,-34.88</roi_se>
+		<roi_sw>144.79,-34.88</roi_sw>
+	</calsite>
+						
+	<calsite>
+		<name>Greenland</name>
+		<type>SNOW</type>
+		<roi_nw>-40.5,74.25</roi_nw>
+		<roi_ne>-39.5,74.25</roi_ne>
+		<roi_se>-39.5,73.25</roi_se>
+		<roi_sw>-40.5,73.25</roi_sw>
+	</calsite>
+						
+	<calsite>
+		<name>Barrows</name>
+		<type>SNOW</type>
+		<roi_nw>-157,73</roi_nw>
+		<roi_ne>-154,73</roi_ne>
+		<roi_se>-154,69</roi_se>
+		<roi_sw>-157,69</roi_sw>
+	</calsite>
+						
+	<calsite>
+		<name>Syowa</name>
+		<type>SNOW</type>
+		<roi_nw>36.5,-67</roi_nw>
+		<roi_ne>42.5,-67</roi_ne>
+		<roi_se>42.5,-71</roi_se>
+		<roi_sw>36.5,-71</roi_sw>
+	</calsite>
+						
+
+	<calsite>
+		<name>Ishigaki</name>
+		<type>BUOY</type>
+		<roi_nw>121.5,26.5</roi_nw>
+		<roi_ne>126.5,26.5</roi_ne>
+		<roi_se>126.5,22.5</roi_se>
+		<roi_sw>121.5,22.5</roi_sw>
+	</calsite>
+						
+	<calsite>
+		<name>Moby</name>
+		<type>BUOY</type>
+		<roi_nw>-159,23</roi_nw>
+		<roi_ne>-155,23</roi_ne>
+		<roi_se>-155,19</roi_se>
+		<roi_sw>-159,19</roi_sw>
+	</calsite>
+						
+	<calsite>
+		<name>Lybian_Desert</name>
+		<type>DESERT</type>
+		<roi_nw>28,22.5</roi_nw>
+		<roi_ne>29,22.5</roi_ne>
+		<roi_se>29,21.5</roi_se>
+		<roi_sw>28,21.5</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Algeria1_small</name>
+		<type>DESERT</type>
+		<roi_nw>-0.483547,23.8764</roi_nw>
+		<roi_ne>-0.316453,23.8764</roi_ne>
+		<roi_se>-0.316453,23.7236</roi_se>
+		<roi_sw>-0.483547,23.7236</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Algeria2_small</name>
+		<type>DESERT</type>
+		<roi_nw>-1.46512,26.1664</roi_nw>
+		<roi_ne>-1.29488,26.1664</roi_ne>
+		<roi_se>-1.29488,26.0136</roi_se>
+		<roi_sw>-1.46512,26.0136</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Algeria3_small</name>
+		<type>DESERT</type>
+		<roi_nw>7.57144,30.3964</roi_nw>
+		<roi_ne>7.74855,30.3964</roi_ne>
+		<roi_se>7.74855,30.2436</roi_se>
+		<roi_sw>7.57144,30.2436</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Algeria4_small</name>
+		<type>DESERT</type>
+		<roi_nw>5.5017,30.1164</roi_nw>
+		<roi_ne>5.6783,30.1164</roi_ne>
+		<roi_se>5.6783,29.9636</roi_se>
+		<roi_sw>5.5017,29.9636</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Algeria5_small</name>
+		<type>DESERT</type>
+		<roi_nw>2.1408,31.0964</roi_nw>
+		<roi_ne>2.3192,31.0964</roi_ne>
+		<roi_se>2.3192,30.9436</roi_se>
+		<roi_sw>2.1408,30.9436</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Arabia1_small</name>
+		<type>DESERT</type>
+		<roi_nw>46.6792,18.9564</roi_nw>
+		<roi_ne>46.8408,18.9564</roi_ne>
+		<roi_se>46.8408,18.8036</roi_se>
+		<roi_sw>46.6792,18.8036</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Arabia2_small</name>
+		<type>DESERT</type>
+		<roi_nw>50.8786,20.2064</roi_nw>
+		<roi_ne>51.0414,20.2064</roi_ne>
+		<roi_se>51.0414,20.0536</roi_se>
+		<roi_sw>50.8786,20.0536</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Arabia3_small</name>
+		<type>DESERT</type>
+		<roi_nw>43.6427,28.9964</roi_nw>
+		<roi_ne>43.8173,28.9964</roi_ne>
+		<roi_se>43.8173,28.8436</roi_se>
+		<roi_sw>43.6427,28.8436</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Sudan1_small</name>
+		<type>DESERT</type>
+		<roi_nw>28.1377,21.8164</roi_nw>
+		<roi_ne>28.3023,21.8164</roi_ne>
+		<roi_se>28.3023,21.6636</roi_se>
+		<roi_sw>28.1377,21.6636</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Niger1_small</name>
+		<type>DESERT</type>
+		<roi_nw>9.72882,19.7464</roi_nw>
+		<roi_ne>9.89118,19.7464</roi_ne>
+		<roi_se>9.89118,19.5936</roi_se>
+		<roi_sw>9.72882,19.5936</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Niger2_small</name>
+		<type>DESERT</type>
+		<roi_nw>10.5079,21.4464</roi_nw>
+		<roi_ne>10.6721,21.4464</roi_ne>
+		<roi_se>10.6721,21.2936</roi_se>
+		<roi_sw>10.5079,21.2936</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Niger3_small</name>
+		<type>DESERT</type>
+		<roi_nw>7.8778,21.6464</roi_nw>
+		<roi_ne>8.0422,21.6464</roi_ne>
+		<roi_se>8.0422,21.4936</roi_se>
+		<roi_sw>7.8778,21.4936</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Egypt1_small</name>
+		<type>DESERT</type>
+		<roi_nw>26.0141,27.1964</roi_nw>
+		<roi_ne>26.1859,27.1964</roi_ne>
+		<roi_se>26.1859,27.0436</roi_se>
+		<roi_sw>26.0141,27.0436</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Libya1_small</name>
+		<type>DESERT</type>
+		<roi_nw>13.266,24.4964</roi_nw>
+		<roi_ne>13.434,24.4964</roi_ne>
+		<roi_se>13.434,24.3436</roi_se>
+		<roi_sw>13.266,24.3436</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Libya2_small</name>
+		<type>DESERT</type>
+		<roi_nw>20.3956,25.1264</roi_nw>
+		<roi_ne>20.5644,25.1264</roi_ne>
+		<roi_se>20.5644,24.9736</roi_se>
+		<roi_sw>20.3956,24.9736</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Libya3_small</name>
+		<type>DESERT</type>
+		<roi_nw>23.0169,23.2264</roi_nw>
+		<roi_ne>23.1831,23.2264</roi_ne>
+		<roi_se>23.1831,23.0736</roi_se>
+		<roi_sw>23.0169,23.0736</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Libya4_small</name>
+		<type>DESERT</type>
+		<roi_nw>23.303,28.6264</roi_nw>
+		<roi_ne>23.477,28.6264</roi_ne>
+		<roi_se>23.477,28.4736</roi_se>
+		<roi_sw>23.303,28.4736</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Mali1_small</name>
+		<type>DESERT</type>
+		<roi_nw>-4.93091,19.1964</roi_nw>
+		<roi_ne>-4.76909,19.1964</roi_ne>
+		<roi_se>-4.76909,19.0436</roi_se>
+		<roi_sw>-4.93091,19.0436</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Mauritania1_small</name>
+		<type>DESERT</type>
+		<roi_nw>-9.38104,19.4764</roi_nw>
+		<roi_ne>-9.21896,19.4764</roi_ne>
+		<roi_se>-9.21896,19.3236</roi_se>
+		<roi_sw>-9.38104,19.3236</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Mauritania2_small</name>
+		<type>DESERT</type>
+		<roi_nw>-8.8618,20.9264</roi_nw>
+		<roi_ne>-8.6982,20.9264</roi_ne>
+		<roi_se>-8.6982,20.7736</roi_se>
+		<roi_sw>-8.8618,20.7736</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Lybian_Desert_small</name>
+		<type>DESERT</type>
+		<roi_nw>28.4176,22.0764</roi_nw>
+		<roi_ne>28.5824,22.0764</roi_ne>
+		<roi_se>28.5824,21.9236</roi_se>
+		<roi_sw>28.4176,21.9236</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Sonora</name>
+		<type>DESERT</type>
+		<roi_nw>-114.3,32.1</roi_nw>
+		<roi_ne>-113.9,32.1</roi_ne>
+		<roi_se>-113.9,31.9</roi_se>
+		<roi_sw>-114.3,31.9</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>DomeC</name>
+		<type>SNOW</type>
+		<roi_nw>122.8950, -74.9017</roi_nw>
+		<roi_ne>123.8950, -74.9017</roi_ne>
+		<roi_se>123.8950, -75.3017</roi_se>
+		<roi_sw>122.8950, -75.3017</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Dome1</name>
+		<type>SNOW</type>
+		<roi_nw>119.7648, -78.3933</roi_nw>
+		<roi_ne>120.7648, -78.3933</roi_ne>
+		<roi_se>120.7648, -78.7933</roi_se>
+		<roi_sw>119.7648, -78.7933</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Dome2</name>
+		<type>SNOW</type>
+		<roi_nw>113.2356,-75.5431</roi_nw>
+		<roi_ne>114.2356,-75.5431</roi_ne>
+		<roi_se>114.2356,-75.9431</roi_se>
+		<roi_sw>113.2356,-75.9431</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Dome3</name>
+		<type>SNOW</type>
+		<roi_nw>128.215,-77.1825</roi_nw>
+		<roi_ne>129.215,-77.1825</roi_ne>
+		<roi_se>129.215,-77.5825</roi_se>
+		<roi_sw>128.515,-77.5825</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Dome4</name>
+		<type>SNOW</type>
+		<roi_nw>122.5,-74.75</roi_nw>
+		<roi_ne>123.5,-74.75</roi_ne>
+		<roi_se>123.5,-75.25</roi_se>
+		<roi_sw>122.5,-75.25</roi_sw>
+	</calsite>
+
+	<calsite>
+		<name>Railroad Valley</name>
+		<type>PLAYA</type>
+		<roi_nw>-115.700,38.52</roi_nw>
+		<roi_ne>-115.630,38.52</roi_ne>
+		<roi_se>-115.630,38.44</roi_se>
+		<roi_sw>-115.700,38.44</roi_sw>
+	</calsite>
+
+</CalSites>
