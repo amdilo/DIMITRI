@@ -390,8 +390,8 @@ IF KEYWORD_SET(SADEOUTPUT) THEN BEGIN
 ;---------------------------------------  
 ; LIMIT TO 2006,2007,2008 AND 2009
     
-    MINT = 2011.
-    MAXT = 2011.5
+    MINT = 2006.
+    MAXT = 2011.
   
     IDX = WHERE(GD_SENSOR1_DATA[0,*] GT MINT AND GD_SENSOR1_DATA[0,*] LT MAXT)
       GD_AUX1 = GD_AUX1[IDX,0]
@@ -576,7 +576,7 @@ ENDIF
 
 ;---------------------------------------
 ; ONLY STORE THE DATA IF CHI IS BELOW 
-; THRESHOLD VALUE
+; THRESHOLD VALUE, ED=Extracted Doublet
 
     IF AMC LT AMC_THRESHOLD THEN BEGIN ;5 FOR ANGLES AND TIME, 12 FOR AUX DATA, NUM BANDS * 2 PLUS CHI,geotype,pix,auto,man
         TT = 2*NUM_BANDS1+NUM_NON_REF

@@ -1,11 +1,11 @@
 PRO COMPARE_DIMITRI_CNES_SADE
 
-SADE1 = '/mnt/Projects/MEREMSII/WG_Reference_Dataset_2/Libya4/Libya4_PARASOL_Calibration_1.SADE'
-SADE2 = '/mnt/Projects/MEREMSII/WG_Reference_Dataset/CNES/Libya4_CNES/Libya4_CNES/CNES_Libya4_PARASOL_Calibration_1.SADE'
+;SADE1 = '/mnt/Projects/MEREMSII/WG_Reference_Dataset_2/Libya4/Libya4_PARASOL_Calibration_1.SADE'
+;SADE2 = '/mnt/Projects/MEREMSII/WG_Reference_Dataset/CNES/Libya4_CNES/Libya4_CNES/CNES_Libya4_PARASOL_Calibration_1.SADE'
 sensor = 'VEGETATION'
 
-;SADE1 = 'R:\MEREMSII\WG_Reference_Dataset\distributable_files\Libya4\Libya4_VEGETATION_Calibration_1.SADE'
-;SADE2 = 'R:\MEREMSII\WG_Reference_Dataset\CNES\Libya4_CNES\Libya4_CNES\CNES_Libya4_VEGETATION_Calibration_1.SADE'
+SADE1 = 'R:\MEREMSII\WG_Reference_Dataset\distributable_files\Libya4\Libya4_VEGETATION_Calibration_1.SADE'
+SADE2 = 'R:\MEREMSII\WG_Reference_Dataset\CNES\Libya4_CNES\Libya4_CNES\CNES_Libya4_VEGETATION_Calibration_1.SADE'
 ;sensor = 'VEGETATION'
 
 ;SADE1 = 'R:\MEREMSII\WG_Reference_Dataset\distributable_files\Libya4\Libya4_MERIS_2nd_Reprocessing.SADE'

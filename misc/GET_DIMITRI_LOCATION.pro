@@ -89,7 +89,7 @@ FUNCTION GET_DIMITRI_LOCATION,LOCATION,VERBOSE=VERBOSE
   'WVAP_TRANS'    : RESULT = CENTRAL_FOLDER+'AUX_DATA'+DL+'transmission'+dl+'Transmission_H2O.txt'
   'GAS_TRANS'     : RESULT = CENTRAL_FOLDER+'AUX_DATA'+DL+'transmission'+dl+'Transmission_O2_trace_gases.txt'
   'VGT_CORRECTION': RESULT = CENTRAL_FOLDER+'AUX_DATA'+DL+'VGT2_CNES_Earth_Sun_correction.txt'
-  'SUM'           : RESULT = CENTRAL_FOLDER+'Bin'+DL+'ME-MAN-ARG-TN-010-DIMITRI_v2.0-SoftwareUserManual_v1.1.pdf'
+  'SUM'           : RESULT = CENTRAL_FOLDER+'User_Manual.pdf'
   
 ;----------------------
 ; VALUES
