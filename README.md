@@ -4,7 +4,7 @@ DIMITRI
 Database for Imaging Mulit-spectral Instruments and Tools for Radiometric Intercomparison
 
 Overview
-========
+--------
 
 The DIMITRI software package contains a suite of IDL routines for the intercomparison of Top Of
 Atmosphere (TOA) radiance and reflectance values within the 400nm - 4μm wavelength range; this
@@ -19,7 +19,7 @@ totals more than 5 terabytes. Additional data for other validation sites, or mor
 can be ingested into DIMITRI to allow even greater temporal and spatial analysis.
 
 System Requirements
-===================
+-------------------
 
 A full IDL license is NOT required for DIMITRI V2.0; the freely available IDL Virtual Machine
 (available at http://www.ittvis.com/ProductsServices/IDL/IDLModules/IDLVirtualMachine.aspx) will
@@ -33,3 +33,11 @@ running DIMITRI.
 
 A full IDL license (http://www.ittvis.com) will allow command line usage, modification of routines
 and recompilation of the software package.
+
+How to use DIMITRI
+------------------
+
+Following extraction, DIMITRI is now ready to be utilised, this can be achieved by:
+* On Windows: Double clicking the “DIMITRI_V2.0.sav” file, or running IDL runtime and
+selecting the file
+* On Linux: Typing “idl –vm=DIMITRI_V2.0.sav”
