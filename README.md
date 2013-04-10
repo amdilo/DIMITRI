@@ -43,6 +43,7 @@ selecting the file
 * On Linux: Typing “idl –vm=DIMITRI_V2.0.sav”
 
 DIMITRI Team
-- Kathryn
-- Dan
+------------------
+- Kathryn Barker (ARGANS)
+- Dan (ARGANS)
 - Marc Bouvet (ESA)
