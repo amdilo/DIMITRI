@@ -29,7 +29,7 @@ class DimitriObject:
                           sensor_name='PARASOL'):  # lint:ok
 
         self.sensor_name = sensor_name
-        self.num_bands = 9
+        self.num_bands = len(self.bands[sensor_name])
         tmp = scipy.io.readsav(file, python_dict=True)
         tmp_dict = tmp['sensor_l1b_ref']
 
