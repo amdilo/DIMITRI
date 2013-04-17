@@ -66,6 +66,8 @@ class DimitriSatelliteObject():
     def write_dictionary_to_csv(self, file="toa.csv"):
         """
 
+
+        :rtype : object
         :param file:
         """
         ##
