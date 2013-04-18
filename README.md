@@ -45,5 +45,5 @@ selecting the file
 DIMITRI Team
 ------------------
 - Kathryn Barker (ARGANS)
-- Dan (ARGANS)
+- Dan Marrable (ARGANS)
 - Marc Bouvet (ESA)
