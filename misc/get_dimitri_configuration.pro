@@ -32,7 +32,7 @@
 ;**************************************************************************************
 ;**************************************************************************************
 
-FUNCTION GET_DIMITRIx_CONFIGURATION,VERBOSE=VERBOSE
+FUNCTION GET_DIMITRI_CONFIGURATION,VERBOSE=VERBOSE
 
 ;---------------------
 ; GET CONFIG FILENAME
