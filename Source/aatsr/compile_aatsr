@@ -1,19 +1,19 @@
 
-.rnew ENVISAT.pro
-.rnew AATSR.pro
-.rnew GET_AATSR_AUX_FILES.pro
-.rnew GET_AATSR_L1B_REFLECTANCE.pro
-.rnew GET_AATSR_LAT_LON.pro
-.rnew GET_AATSR_QUICKLOOK.pro
-.rnew GET_AATSR_VIEWING_GEOMETRIES.pro
-.rnew GET_AATSR_TIMESERIES_PLOTS.pro
+.rnew envisat.pro
+.rnew aatsr.pro
+.rnew get_aatsr_aux_files.pro
+.rnew get_aatsr_l1b_reflectance.pro
+.rnew get_aatsr_lat_lon.pro
+.rnew get_aatsr_quicklook.pro
+.rnew get_aatsr_viewing_geometries.pro
+.rnew get_aatsr_timeseries_plots.pro
 
-.rnew AATSR_READ_DRIFT_TABLE.pro
-.rnew AATSR_APPLY_DRIFT_CORRECTION.pro
-.rnew AATSR_CORRECT_V16_NONLINEARITY.pro
-.rnew AATSR_REMOVE_DRIFT_CORRECTION.pro
-.rnew AATSR_APPLY_CORRECTIONS.pro
-.rnew INGEST_AATSR_PRODUCT.pro
+.rnew aatsr_read_drift_table.pro
+.rnew aatsr_apply_drift_correction.pro
+.rnew aatsr_correct_v16_nonlinearity.pro
+.rnew aatsr_remove_drift_correction.pro
+.rnew aatsr_apply_corrections.pro
+.rnew ingest_aatsr_product.pro
 
 
 

@@ -31,9 +31,7 @@
 ;*        01 NOV 2013 - C MAZERAN - FIRST IMPLEMENTATION
 ;*
 ;* VALIDATION HISTORY:
-;*        01 NOV 2013 - C MAZERAN - WINDOWS 32-BIT MACHINE IDL 8.0 AND LINUX 64-BIT MACHINE 
-;*                                  IDL 8.0, NOMINAL COMPILATION AND OPERATION. TESTED FOR 
-;*                                  MERIS 
+;*        01 NOV 2013 - C MAZERAN - LINUX 64-BIT MACHINE IDL 8.0, NOMINAL COMPILATION AND OPERATION
 ;*
 ;**************************************************************************************
 FUNCTION GLINT_FCT_INV, X
