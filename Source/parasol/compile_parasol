@@ -1,10 +1,10 @@
 
-.rnew GET_PARASOL_L1B_PIXEL_STRUCTURE.pro
-.rnew GET_PARASOL_L1B_HEADER.pro
-.rnew GET_PARASOL_L1B_DATA.pro
-.rnew GET_PARASOL_QUICKLOOK.pro
-.rnew GET_PARASOL_TIMESERIES_PLOTS.pro
-.rnew INGEST_PARASOL_PRODUCT.pro
+.rnew get_parasol_l1b_pixel_structure.pro
+.rnew get_parasol_l1b_header.pro
+.rnew get_parasol_l1b_data.pro
+.rnew get_parasol_quicklook.pro
+.rnew get_parasol_timeseries_plots.pro
+.rnew ingest_parasol_product.pro
 
 
 

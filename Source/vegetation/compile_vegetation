@@ -1,17 +1,17 @@
 
-.rnew GET_VEGETATION_HEADER_INFO.pro
-.rnew GET_VEGETATION_L1B_REFLECTANCE.pro
-.rnew GET_VEGETATION_LAT_LON_STEREO_POLE.pro
-.rnew GET_VEGETATION_LAT_LON_PLATE_CARREE.pro
-.rnew GET_VEGETATION_LAT_LON.pro
-.rnew GET_VEGETATION_OZONE.pro
-.rnew GET_VEGETATION_WVAP.pro
-.rnew GET_VEGETATION_VIEWING_GEOMETRIES.pro
-.rnew VGT_CORRECTION_TEMPLATE.pro
-.rnew GET_VGT_CORRECTION_FACTOR.pro
-.rnew GET_VEGETATION_QUICKLOOK.pro
-.rnew GET_VEGETATION_TIMESERIES_PLOTS.pro
-.rnew INGEST_VEGETATION_PRODUCT.pro
+.rnew get_vegetation_header_info.pro
+.rnew get_vegetation_l1b_reflectance.pro
+.rnew get_vegetation_lat_lon_stereo_pole.pro
+.rnew get_vegetation_lat_lon_plate_carree.pro
+.rnew get_vegetation_lat_lon.pro
+.rnew get_vegetation_ozone.pro
+.rnew get_vegetation_wvap.pro
+.rnew get_vegetation_viewing_geometries.pro
+.rnew vgt_correction_template.pro
+.rnew get_vgt_correction_factor.pro
+.rnew get_vegetation_quicklook.pro
+.rnew get_vegetation_timeseries_plots.pro
+.rnew ingest_vegetation_product.pro
 
 
 

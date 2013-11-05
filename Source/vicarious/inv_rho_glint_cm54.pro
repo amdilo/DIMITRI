@@ -1,0 +1,164 @@
+;**************************************************************************************
+;**************************************************************************************
+;*
+;* NAME:
+;*     INV_RHO_GLINT_CM54
+;* 
+;* PURPOSE:
+;*      INVERSE GLINT REFLECTANCE BY COX & MUNK 1954 MODEL TO RETRIEVE WIND SPEED
+;*      ISOTROPIC VERSION
+;* 
+;* CALLING SEQUENCE:
+;*      RES = INV_RHO_GLINT_CM54(RHO_G, WIND_IN, RAA, VZA, SZA)
+;* 
+;* INPUTS:
+;*      RHOG     - GLINT REFLECTANCE AT SEA LEVEL
+;*      WIND_IN  - INITIAL GUESS FOR WIND SPEED IN M/S.
+;*      RAA      - THE RELATIVE AZIMUTH ANGLE IN DEGREES
+;*      VZA      - THE VIEWING ZENITH ANGLE IN DEGREES 
+;*      SZA      - THE SOLAR ZENITH ANGLE IN DEGREES
+;*
+;* KEYWORDS:
+;*      VERBOSE          - PROCESSING STATUS OUTPUTS
+;*
+;* OUTPUTS:
+;*      WIND_OUT  - RETRIEVED WIND SPEED IN M/S.
+;*
+;* COMMON BLOCKS:
+;*      NONE
+;*
+;* MODIFICATION HISTORY:
+;*        01 NOV 2013 - C MAZERAN - FIRST IMPLEMENTATION
+;*
+;* VALIDATION HISTORY:
+;*        01 NOV 2013 - C MAZERAN - LINUX 64-BIT MACHINE IDL 8.0, NOMINAL COMPILATION AND OPERATION
+;*
+;**************************************************************************************
+FUNCTION GLINT_FCT_INV, X
+
+ COMMON GLINT_FCT_COEF, FCT_C1, FCT_C2, FCT_C3
+ 
+ SIGMA2 = 0.003+0.00512*X
+ RES = ABS(FCT_C1/SIGMA2*EXP(-FCT_C2/SIGMA2) - FCT_C3)
+
+ RETURN, [RES]
+END
+
+FUNCTION INV_RHO_GLINT_CM54, RHO_G, WIND_IN, RAA, VZA, SZA
+ 
+ COMMON GLINT_FCT_COEF
+
+;-----------------------------------------
+; DEFINE CURRENT FUNCTION NAME
+
+ FCT_NAME = "INV_RHO_GLINT_CM54"
+
+;-----------------------------------------
+; CHECK INPUTS CORRESPOND TO
+; A ONE-DIMENSIONNAL ARRAY
+
+ S0 = SIZE(RHO_G,/N_DIMENSIONS)
+ S1 = SIZE(RAA,/N_DIMENSIONS)
+ S2 = SIZE(VZA,/N_DIMENSIONS)
+ S3 = SIZE(SZA,/N_DIMENSIONS)
+ S  = [S0, S1, S2, S3]
+
+ IF N_ELEMENTS(UNIQ(S(SORT(S)))) NE 1 THEN BEGIN
+   PRINT, FCT_NAME+":ERROR, WORKS ONLY FOR 1D ARRAY"
+   RETURN, -1
+ ENDIF
+
+;-----------------------------------------
+; CHECK INPUTS HAVE THE SAME DIMENSION
+
+ N0 = N_ELEMENTS(RHO_G)
+ N1 = N_ELEMENTS(RAA)
+ N2 = N_ELEMENTS(VZA)
+ N3 = N_ELEMENTS(SZA)
+ N  = [N0, N1, N2, N3]
+ IF N_ELEMENTS(UNIQ(N(SORT(N)))) NE 1 THEN BEGIN
+   PRINT, FCT_NAME+":ERROR, INPUTS DON'T HAVE SAME DIMENSION"
+   RETURN, -1
+ ENDIF
+
+;-----------------------------------------
+; WATER INDEX REFRACTION (AT 460 NM)
+
+ NW_R = 1.33419
+ NW_I = 3.715421E-7
+
+;-----------------------------------------
+; COMPUTES GEOMETRICAL QUANTITIES 
+
+ COS2OMEGA = COS(SZA*!DTOR)*COS(VZA*!DTOR)+SIN(SZA*!DTOR)*SIN(VZA*!DTOR)*COS(RAA*!DTOR)
+ SUMCOS2   = (COS(SZA*!DTOR)+COS(VZA*!DTOR))^2
+ COSBETA4  = (SUMCOS2/(2.+2.*COS2OMEGA))^2
+
+ COSOMEGA  = COS(0.5*ACOS(COS2OMEGA))
+ SINOMEGA  = SQRT(1. - COSOMEGA*COSOMEGA)
+
+;-----------------------------------------
+; FRESNEL COEFFICIENT 
+
+ A1  = ABS(NW_R*NW_R - NW_I*NW_I - SINOMEGA*SINOMEGA)
+ A2  = SQRT(A1*A1 + 4.*NW_R*NW_R*NW_I*NW_I)
+ U   = sqrt(0.5*(A1 + A2))
+ V   = sqrt(0.5*(A2 - A1))
+ RR2 = ((COSOMEGA-U)*(COSOMEGA-U) + V*V) / ((COSOMEGA+U)*(COSOMEGA+U) + V*V)
+ B1  = (NW_R*NW_R - NW_I*NW_I)*COSOMEGA
+ B2  = 2.*NW_R*NW_I*COSOMEGA
+ RL2 = ((B1-U)*(B1-U) + (B2+V)*(B2+V))/((B1+U)*(B1+U) + (B2-V)*(B2-V))
+ R   = 0.5*(RR2 + RL2)
+
+;-----------------------------------------
+; FIXED PARAMETER IN THE CM54 MODEL
+
+ A = R/(4.*COS(SZA*!DTOR)*COS(VZA*!DTOR)*COSBETA4)
+ B = (2.*(1.+COS2OMEGA)-SUMCOS2)/SUMCOS2
+
+;-----------------------------------------
+; LOOP ON ALL PIXELS
+ 
+ WIND_OUT=DBLARR(N0)
+ FOR I=0, N0-1 DO BEGIN
+
+    FCT_C1 = A[I]
+    FCT_C2 = B[I]
+
+;-----------------------------------------
+; CHECK THE GEOMETRY CAN PRODUCE GLINT
+; WITH INPUT WIND
+
+    FCT_C3  = 0.
+    IF (GLINT_FCT_INV(WIND_IN[I])) LT 1.E-2 THEN BEGIN
+      WIND_OUT[I] = -1.
+      CONTINUE
+    ENDIF
+
+;-----------------------------------------
+; CHECK GLINT IS LOWER THAN MAX POSSIBLE REFLECTANCE 
+; NOTE: THIS AVOIDS ENCOUNTERING ZERO DERIVATIVE IN NEWTON ALGORITHM
+
+  W_0=(FCT_C2-0.003)/0.00512
+  RHO_G_MAX=GLINT_FCT_INV(W_0)
+  IF RHO_G[I] GE RHO_G_MAX THEN BEGIN
+    WIND_OUT[I] = -1.
+    CONTINUE
+  ENDIF
+
+;-----------------------------------------
+; INVERSE RHOG 
+
+    FCT_C3  = RHO_G[I]
+ 
+    IF GLINT_FCT_INV(WIND_IN[I]) LT 1E-5 THEN WIND_OUT[I]=WIND_IN[I] ELSE $
+       WIND_OUT[I]=NEWTON(WIND_IN[I], 'GLINT_FCT_INV', CHECK=CHECK, TOLX=1.E-1, TOLF=1.E-5, TOLMIN=1.E-5)
+    
+ ENDFOR
+
+ RETURN, WIND_OUT
+
+END
+
+
+

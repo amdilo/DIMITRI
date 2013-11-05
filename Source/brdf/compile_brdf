@@ -1,11 +1,11 @@
 
-.rnew ROUJEAN_BRDF_KERNEL_F2.pro
-.rnew ROUJEAN_BRDF_KERNEL_F1.pro
-.rnew ROUJEAN_BRDF_COEF.pro
-.rnew ROUJEAN_BRDF_COMPUTE_RHO.pro
-.rnew ROUJEAN_BRDF_PLOTS.pro
-.rnew ROUJEAN_BRDF.pro
-.rnew DIMITRI_INTERFACE_ROUJEAN.pro
+.rnew roujean_brdf_kernel_f2.pro
+.rnew roujean_brdf_kernel_f1.pro
+.rnew roujean_brdf_coef.pro
+.rnew roujean_brdf_compute_rho.pro
+.rnew roujean_brdf_plots.pro
+.rnew roujean_brdf.pro
+.rnew dimitri_interface_roujean.pro
 
 
 

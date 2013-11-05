@@ -26,6 +26,7 @@
 ;* MODIFICATION HISTORY:
 ;*        21 MAR 2011 - C KENT    - DIMITRI-2 V1.0
 ;*        23 AUG 2011 - C KENT    - ADDED TOOL NAME VARIABLE
+;*        01 NOV 2013 - C MAZERAN - ADDED MARINE FILES AND RTM FOLDER
 ;*
 ;* VALIDATION HISTORY:
 ;*        14 APR 2011 - C KENT    - WINDOWS 32-BIT IDL 7.1 AND LINUX 64-BIT IDL 8.0 NOMINAL
@@ -62,6 +63,8 @@ FUNCTION GET_DIMITRI_LOCATION,LOCATION,VERBOSE=VERBOSE
   'RSR'           : RESULT = CENTRAL_FOLDER+'AUX_DATA'+DL+'spectral_response'+DL
   'RSR_DIM'       : RESULT = CENTRAL_FOLDER+'AUX_DATA'+DL+'spectral_response'+DL+'DIMITRI_Sites'+dl  
   'RSR_USR'       : RESULT = CENTRAL_FOLDER+'AUX_DATA'+DL+'spectral_response'+DL+'USER_Sites'+dl
+  'MARINE'        : RESULT = CENTRAL_FOLDER+'AUX_DATA'+DL+'marine'+DL
+  'RTM'           : RESULT = CENTRAL_FOLDER+'AUX_DATA'+DL+'RTM'+DL
   'BIN'           : RESULT = CENTRAL_FOLDER+'Bin'+DL
   'DB_BACKUP'     : RESULT = CENTRAL_FOLDER+'Bin'+DL+'DB_backup'+DL
   'SOURCE'        : RESULT = CENTRAL_FOLDER+'Source'+DL
@@ -89,8 +92,11 @@ FUNCTION GET_DIMITRI_LOCATION,LOCATION,VERBOSE=VERBOSE
   'WVAP_TRANS'    : RESULT = CENTRAL_FOLDER+'AUX_DATA'+DL+'transmission'+dl+'Transmission_H2O.txt'
   'GAS_TRANS'     : RESULT = CENTRAL_FOLDER+'AUX_DATA'+DL+'transmission'+dl+'Transmission_O2_trace_gases.txt'
   'VGT_CORRECTION': RESULT = CENTRAL_FOLDER+'AUX_DATA'+DL+'VGT2_CNES_Earth_Sun_correction.txt'
+  'MM01_ECHI'     : RESULT = CENTRAL_FOLDER+'AUX_DATA'+DL+'marine'+dl+'2001-e-chi.txt'
+  'MOREL_MUD'     : RESULT = CENTRAL_FOLDER+'AUX_DATA'+DL+'marine'+dl+'mud.dat'
+  'WATER_COEF'    : RESULT = CENTRAL_FOLDER+'AUX_DATA'+DL+'marine'+dl+'water_coef.txt'
   'SUM'           : RESULT = CENTRAL_FOLDER+'User_Manual.pdf'
-  
+
 ;----------------------
 ; VALUES
 

@@ -1,7 +1,7 @@
 
-.rnew GET_GASEOUS_TRANSMISSION.pro
-.rnew GET_OZONE_TRANSMISSION.pro
-.rnew GET_WVAP_TRANSMISSION.pro
-.rnew COMPUTE_TRANSMISSION.pro
-.rnew PLOT_SIM_VGT.pro
-.rnew VGT_SIMULATION.pro
+.rnew get_gaseous_transmission.pro
+.rnew get_ozone_transmission.pro
+.rnew get_wvap_transmission.pro
+.rnew compute_transmission.pro
+.rnew plot_sim_vgt.pro
+.rnew vgt_simulation.pro
