@@ -32,6 +32,8 @@ cd,'../brdf/'
 @compile_brdf
 cd,'../toa_simulation/'
 @compile_toa_sim
+cd, '../vicarious/'
+@compile_vicarious
 cd,'../hmi/'
 @compile_hmi
 cd,'..'

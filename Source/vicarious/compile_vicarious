@@ -1,0 +1,21 @@
+;COMMON RTM_LUT, RHOR_LUT, TRA_DOWN_LUT, TRA_UP_LUT, XC_LUT, TAUA_LUT
+.rnew compile_common.pro
+.rnew read_rayleigh.pro
+.rnew read_taua.pro
+.rnew read_tra.pro
+.rnew read_xc.pro
+.rnew compute_rayleigh.pro
+.rnew compute_tra.pro
+.rnew compute_xc.pro
+.rnew inverse_xc.pro
+.rnew spectral_dep.pro
+.rnew compute_aw_bw.pro
+.rnew compute_e_chi.pro
+.rnew compute_mud.pro
+.rnew r0_mm01.pro
+.rnew rayleigh_calibration.pro
+.rnew taur_ht74.pro
+.rnew rho_glint_cm54.pro
+.rnew inv_rho_glint_cm54.pro
+.rnew glint_calibration.pro
+
