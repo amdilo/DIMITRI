@@ -46,4 +46,5 @@ DIMITRI Team
 ------------------
 - Kathryn Barker (ARGANS)
 - Dan Marrable (ARGANS)
+- Constant Mazeran (Solvo)
 - Marc Bouvet (ESA)
