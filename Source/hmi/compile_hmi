@@ -1,37 +1,37 @@
-.rnew COMPILE_COMMON.pro
-.rnew DHMI_CLOUD_SCREENING.pro
-.rnew DHMI_CS_SETUP.pro 
+.rnew compile_common.pro
+.rnew dhmi_cloud_screening.pro
+.rnew dhmi_cs_setup.pro 
 
-.rnew DHMI_CONFIGURATION.pro 
-.rnew DHMI_INGEST.pro 
-.rnew DHMI_PROCESS_1.pro 
-.rnew DHMI_PROCESS_2.pro 
+.rnew dhmi_configuration.pro 
+.rnew dhmi_ingest.pro 
+.rnew dhmi_process_1.pro 
+.rnew dhmi_process_2.pro 
 
-.rnew GET_DIMITRI_VISUALISATION_COLOURS.pro
-.rnew GET_DIMITRI_VISUALISATION_COLOURS_BRDF.pro 
+.rnew get_dimitri_visualisation_colours.pro
+.rnew get_dimitri_visualisation_colours_brdf.pro 
 
-.rnew RSR_LEGEND_UPDATE.pro
-.rnew RSR_PLOT_RESET.pro
-.rnew DIMITRI_RSR_COLOURS.pro
-.rnew PLOT_DIMITRI_SENSOR_RSR.pro 
-.rnew DHMI_RSR.pro 
+.rnew rsr_legend_update.pro
+.rnew rsr_plot_reset.pro
+.rnew dimitri_rsr_colours.pro
+.rnew plot_dimitri_sensor_rsr.pro 
+.rnew dhmi_rsr.pro 
 
-.rnew DIMITRI_VISUALISATION_ANGLES.pro 
-.rnew DIMITRI_VISUALISATION_BRDF_RHO.pro 
-.rnew DIMITRI_VISUALISATION_POLYNOMIAL.pro
-.rnew DIMITRI_VISUALISATION_RECALIBRATION.pro 
-.rnew DIMITRI_VISUALISATION_REFLECTANCE.pro 
-.rnew DIMITRI_VISUALISATION_SUPER_RHO.pro
-.rnew DIMITRI_VISUALISATION_VGT_RHO.pro
-.rnew DIMITRI_VISUALISATION.pro 
-.rnew DHMI_VISU.pro
+.rnew dimitri_visualisation_angles.pro 
+.rnew dimitri_visualisation_brdf_rho.pro 
+.rnew dimitri_visualisation_polynomial.pro
+.rnew dimitri_visualisation_recalibration.pro 
+.rnew dimitri_visualisation_reflectance.pro 
+.rnew dimitri_visualisation_super_rho.pro
+.rnew dimitri_visualisation_vgt_rho.pro
+.rnew dimitri_visualisation.pro 
+.rnew dhmi_visu.pro
 
-.rnew DIMITRI_DATABASE_PLOTS_WD.pro 
-.rnew DIMITRI_DATABASE_STATS_WD.pro 
-.rnew DIMITRI_DOWNLOAD_WD.pro 
-.rnew DIMITRI_NEW_SITE_WD.pro 
+.rnew dimitri_database_plots_wd.pro 
+.rnew dimitri_database_stats_wd.pro 
+.rnew dimitri_download_wd.pro 
+.rnew dimitri_new_site_wd.pro 
  
-;.rnew PLOT_DIMITRI_DOUBLETS.pro 
-;.rnew PLOT_DIMITRI_SENSOR_RSR_OLD.pro 
+;.rnew plot_dimitri_doublets.pro 
+;.rnew plot_dimitri_sensor_rsr_old.pro 
 
-.rnew DIMITRI_V2.pro
+.rnew dimitri_v2.pro

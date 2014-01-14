@@ -1,8 +1,8 @@
 
-.rnew DIMITRI_CLOUD_SCREENING_BRIGHT_RHO.pro
-.rnew CS_BAND_INFO.pro
-.rnew CLOUD_MODULE_GLOBCARBON.pro
-.rnew CLOUD_MODULE_GLOBCARBON_P.pro
-.rnew CLOUD_MODULE_LCCA.pro
-.rnew CLOUD_MODULE_VGT.pro
-.rnew DIMITRI_CLOUD_SCREENING.pro
+.rnew dimitri_cloud_screening_bright_rho.pro
+.rnew cs_band_info.pro
+.rnew cloud_module_globcarbon.pro
+.rnew cloud_module_globcarbon_p.pro
+.rnew cloud_module_lcca.pro
+.rnew cloud_module_vgt.pro
+.rnew dimitri_cloud_screening.pro

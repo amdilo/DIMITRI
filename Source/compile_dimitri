@@ -18,6 +18,8 @@ cd,'../parasol/'
 @compile_parasol
 cd,'../vegetation/'
 @compile_vegetation
+cd, '../viirs/'
+@compile_viirs
 cd,'../ingest/'
 @compile_ingest
 cd,'../sade/'
