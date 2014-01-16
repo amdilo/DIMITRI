@@ -92,15 +92,15 @@ FUNCTION GET_DIMITRI_LOCATION,LOCATION,VERBOSE=VERBOSE
   'WVAP_TRANS'    : RESULT = CENTRAL_FOLDER+'AUX_DATA'+DL+'transmission'+dl+'Transmission_H2O.txt'
   'GAS_TRANS'     : RESULT = CENTRAL_FOLDER+'AUX_DATA'+DL+'transmission'+dl+'Transmission_O2_trace_gases.txt'
   'VGT_CORRECTION': RESULT = CENTRAL_FOLDER+'AUX_DATA'+DL+'VGT2_CNES_Earth_Sun_correction.txt'
-  'MM01_ECHI'     : RESULT = CENTRAL_FOLDER+'AUX_DATA'+DL+'marine'+dl+'2001-e-chi.txt'
-  'MOREL_MUD'     : RESULT = CENTRAL_FOLDER+'AUX_DATA'+DL+'marine'+dl+'mud.dat'
+  'MM01_ECHI'     : RESULT = CENTRAL_FOLDER+'AUX_DATA'+DL+'marine'+dl+'Morel-e-chi-coef-2001.txt'
+  'MOREL_MUD'     : RESULT = CENTRAL_FOLDER+'AUX_DATA'+DL+'marine'+dl+'Morel-mud.txt'
   'WATER_COEF'    : RESULT = CENTRAL_FOLDER+'AUX_DATA'+DL+'marine'+dl+'water_coef.txt'
   'SUM'           : RESULT = CENTRAL_FOLDER+'User_Manual.pdf'
 
 ;----------------------
 ; VALUES
 
-  'TOOL'          : RESULT = 'DIMITRI V2.0'
+  'TOOL'          : RESULT = 'DIMITRI V3.0'
     
   ELSE            : BEGIN
                       PRINT, 'ERROR, LOCATION CASE NOT FOUND'
