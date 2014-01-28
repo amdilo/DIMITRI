@@ -14,6 +14,7 @@
 .rnew r0_mm01.pro
 .rnew rayleigh_calibration.pro
 .rnew taur_ht74.pro
+.rnew fresnel.pro
 .rnew inv_rho_glint_cm54.pro
 .rnew glint_calibration.pro
 
