@@ -121,9 +121,9 @@ PRO CREATE_NEW_DIMITRI_TAR
 
   PRINT
   PRINT,'**********************************'
-  PRINT,'*   COMPLETED DIMITRI TAR        *
-  PRINT,'*   S: '+STIME+'  *
-  PRINT,'*   E: '+SYSTIME()+'  *
+  PRINT,'*   COMPLETED DIMITRI TAR        *'
+  PRINT,'*   S: '+STIME+'  *'
+  PRINT,'*   E: '+SYSTIME()+'  *'
   PRINT,'**********************************'
     
 END
