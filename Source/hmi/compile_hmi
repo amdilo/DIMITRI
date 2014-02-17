@@ -1,6 +1,8 @@
 .rnew compile_common.pro
 .rnew dhmi_cloud_screening.pro
 .rnew dhmi_cs_setup.pro 
+.rnew dhmi_brdf_cs.pro
+.rnew dhmi_ssv_cs.pro
 
 .rnew dhmi_configuration.pro 
 .rnew dhmi_ingest.pro 
