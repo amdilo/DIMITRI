@@ -15,6 +15,7 @@
 .rnew mpcurvefit.pro 
 .rnew mpfit.pro
 .rnew get_dimitri_rsr_template.pro 
+.rnew get_dimitri_spectra_template.pro 
 .rnew get_dimitri_sensor_data_template.pro 
 .rnew get_dimitri_site_data_template.pro
 .rnew fileinfo.pro
