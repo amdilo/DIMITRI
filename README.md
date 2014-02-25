@@ -21,14 +21,14 @@ can be ingested into DIMITRI to allow even greater temporal and spatial analysis
 System Requirements
 -------------------
 
-A full IDL license is NOT required for DIMITRI V2.0; the freely available IDL Virtual Machine
+A full IDL license is NOT required for DIMITRI V3.0; the freely available IDL Virtual Machine
 (available at http://www.ittvis.com/ProductsServices/IDL/IDLModules/IDLVirtualMachine.aspx) will
 allow use of the pre-compiled DIMITRI package and use of the full functionalities accessible from the
 HMI.
 
 DIMITRI has been developed to be compatible on both Linux and Windows based systems; however,
-MAC compatibility cannot be guaranteed. DIMITRI has been developed for use with IDL 7.1 or
-higher; the minimum requirements required for IDL 7.1 are therefore the minimum requirements for
+MAC compatibility cannot be guaranteed. DIMITRI has been developed for use with IDL 8.2.3 or
+higher; the minimum requirements required for IDL 8.2.3 are therefore the minimum requirements for
 running DIMITRI.
 
 A full IDL license (http://www.ittvis.com) will allow command line usage, modification of routines
@@ -40,10 +40,11 @@ How to use DIMITRI
 Following extraction, DIMITRI is now ready to be utilised, this can be achieved by:
 * On Windows: Double clicking the “DIMITRI_V2.0.sav” file, or running IDL runtime and
 selecting the file
-* On Linux: Typing “idl –vm=DIMITRI_V2.0.sav”
+* On Linux: Typing “idl –vm=DIMITRI_V3.sav”
 
 DIMITRI Team
 ------------------
 - Kathryn Barker (ARGANS)
 - Dan Marrable (ARGANS)
 - Marc Bouvet (ESA)
+- Constant Mazeran (Solvo)
