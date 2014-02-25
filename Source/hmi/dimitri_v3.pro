@@ -2,14 +2,14 @@
 ;**************************************************************************************
 ;*
 ;* NAME:
-;*      DIMITRI_V2 
+;*      DIMITRI_V3 
 ;* 
 ;* PURPOSE:
 ;*      THESE ROUTINES GENERATE THE MAIN DIMITRI HMI WIDGET WHICH ALLOWS INTERFACE 
 ;*      TO A NUMBER OF THE DIMITRI FUNCTIONS
 ;* 
 ;* CALLING SEQUENCE:
-;*      DIMITRI_V2     
+;*      DIMITRI_V3     
 ;* 
 ;* INPUTS:
 ;*      NONE     
@@ -85,11 +85,11 @@ PRO DHMI_BUTTON_EVENT,EVENT
                           ENDCASE  
                         END
     'ABOUT'           : BEGIN
-                          MSG   = [	'DIMITRI Version 2.0','Release Date: 03/07/2012'              ,$
-                                    'IDL 7.0 Or Higher required','___________________',''             ,$
+                          MSG   = [	'DIMITRI Version 3.0','Release Date: 25/02/2013'              ,$
+                                    'IDL 8.2.3 Or Higher required','___________________',''             ,$
                                     'Email: ','=> Dimitri@argans.co.uk'                  ,$
-                                    'Authors:','=> Marc Bouvet (ESA-ESTEC)','=> Chris Kent (ARGANS Ltd)']
-	                        ABOUT = DIALOG_MESSAGE(MSG,/INFORMATION,TITLE = 'DIMITRI V2.0: ABOUT',/CENTER)
+                                    'Authors:','=> Marc Bouvet (ESA-ESTEC)','=> Chris Kent (ARGANS Ltd)','=> Dan Marrable (ARGANS Ltd)','=> Constant Mazeran (Solvo)']
+	                        ABOUT = DIALOG_MESSAGE(MSG,/INFORMATION,TITLE = 'DIMITRI V3.0: ABOUT',/CENTER)
                         END
   ENDCASE
 
@@ -114,7 +114,7 @@ END
 ;**************************************************************************************
 ;**************************************************************************************
 
-PRO DIMITRI_V2,VERBOSE=VERBOSE
+PRO DIMITRI_V3,VERBOSE=VERBOSE
 
 COMMON DHMI_DATABASE,DHMI_DB_DATA
 
@@ -178,7 +178,7 @@ COMMON DHMI_DATABASE,DHMI_DB_DATA
 ; DEFINE MAIN WIDGET BASE
 
   IF KEYWORD_SET(VERBOSE) THEN PRINT,'DIMITRI_HMI: DEFINING MAIN HMI WIDGET'
-  DTLB = WIDGET_BASE(XSIZE=XSIZE,YSIZE=YSIZE,XOFFSET=XLOC,YOFFSET=YLOC,TITLE='DIMITRI V2.0',COLUMN=1)
+  DTLB = WIDGET_BASE(XSIZE=XSIZE,YSIZE=YSIZE,XOFFSET=XLOC,YOFFSET=YLOC,TITLE='DIMITRI V3.0',COLUMN=1)
 
 ;---------------------------
 ; ADD DRAW_WIDGET FOR MAIN TITLE IMAGE
