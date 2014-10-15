@@ -34,10 +34,12 @@ cd,'../brdf/'
 @compile_brdf
 cd,'../toa_simulation/'
 @compile_toa_sim
+cd, '../vicarious/'
+@compile_vicarious
 cd,'../hmi/'
 @compile_hmi
 cd,'..'
 RESOLVE_ALL
 
 
-save,/routines,filename='../DIMITRI_V2.sav'
+save,/routines,filename='../DIMITRI_V3.sav'

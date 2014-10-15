@@ -1,11 +1,15 @@
 .rnew compile_common.pro
 .rnew dhmi_cloud_screening.pro
 .rnew dhmi_cs_setup.pro 
+.rnew dhmi_brdf_cs.pro
+.rnew dhmi_ssv_cs.pro
 
 .rnew dhmi_configuration.pro 
 .rnew dhmi_ingest.pro 
 .rnew dhmi_process_1.pro 
 .rnew dhmi_process_2.pro 
+.rnew dhmi_process_3.pro 
+.rnew dhmi_process_4.pro 
 
 .rnew get_dimitri_visualisation_colours.pro
 .rnew get_dimitri_visualisation_colours_brdf.pro 
@@ -34,4 +38,4 @@
 ;.rnew plot_dimitri_doublets.pro 
 ;.rnew plot_dimitri_sensor_rsr_old.pro 
 
-.rnew dimitri_v2.pro
+.rnew dimitri_v3.pro

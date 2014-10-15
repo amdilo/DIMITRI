@@ -26,6 +26,9 @@
 ;* MODIFICATION HISTORY:
 ;*        21 MAR 2011 - C KENT    - DIMITRI-2 V1.0
 ;*        23 AUG 2011 - C KENT    - ADDED TOOL NAME VARIABLE
+;*        01 NOV 2013 - C MAZERAN - ADDED MARINE FILES AND RTM FOLDER
+;*        20 JAN 2014 - C MAZERAN - ADDED WATER REFRACTIVE INDEX FILE
+;*        17 FEB 2014 - C MAZERAN - ADDED CLOUD PNG
 ;*
 ;* VALIDATION HISTORY:
 ;*        14 APR 2011 - C KENT    - WINDOWS 32-BIT IDL 7.1 AND LINUX 64-BIT IDL 8.0 NOMINAL
@@ -62,6 +65,8 @@ FUNCTION GET_DIMITRI_LOCATION,LOCATION,VERBOSE=VERBOSE
   'RSR'           : RESULT = CENTRAL_FOLDER+'AUX_DATA'+DL+'spectral_response'+DL
   'RSR_DIM'       : RESULT = CENTRAL_FOLDER+'AUX_DATA'+DL+'spectral_response'+DL+'DIMITRI_Sites'+dl  
   'RSR_USR'       : RESULT = CENTRAL_FOLDER+'AUX_DATA'+DL+'spectral_response'+DL+'USER_Sites'+dl
+  'MARINE'        : RESULT = CENTRAL_FOLDER+'AUX_DATA'+DL+'marine'+DL
+  'RTM'           : RESULT = CENTRAL_FOLDER+'AUX_DATA'+DL+'RTM'+DL
   'BIN'           : RESULT = CENTRAL_FOLDER+'Bin'+DL
   'DB_BACKUP'     : RESULT = CENTRAL_FOLDER+'Bin'+DL+'DB_backup'+DL
   'SOURCE'        : RESULT = CENTRAL_FOLDER+'Source'+DL
@@ -82,6 +87,7 @@ FUNCTION GET_DIMITRI_LOCATION,LOCATION,VERBOSE=VERBOSE
   'SITE_TYPES'    : RESULT = CENTRAL_FOLDER+'Bin'+DL+'DIMITRI_SITE_TYPES.txt'
   'TITLE_PNG'     : RESULT = CENTRAL_FOLDER+'Source'+DL+'png'+DL+'dimitri_title.png'
   'INGEST_PNG'    : RESULT = CENTRAL_FOLDER+'Source'+DL+'png'+DL+'ingest.png'
+  'CLOUD_PNG'     : RESULT = CENTRAL_FOLDER+'Source'+DL+'png'+DL+'cloud.png'
   'PROCESS_PNG'   : RESULT = CENTRAL_FOLDER+'Source'+DL+'png'+DL+'process.png'
   'VISU_PNG'      : RESULT = CENTRAL_FOLDER+'Source'+DL+'png'+DL+'visualise.png'
   'BRIGHT_LUT'    : RESULT = CENTRAL_FOLDER+'AUX_DATA'+DL+'CLOUD_SCREENING_Bright_Threshold_LUT.dat'
@@ -89,12 +95,16 @@ FUNCTION GET_DIMITRI_LOCATION,LOCATION,VERBOSE=VERBOSE
   'WVAP_TRANS'    : RESULT = CENTRAL_FOLDER+'AUX_DATA'+DL+'transmission'+dl+'Transmission_H2O.txt'
   'GAS_TRANS'     : RESULT = CENTRAL_FOLDER+'AUX_DATA'+DL+'transmission'+dl+'Transmission_O2_trace_gases.txt'
   'VGT_CORRECTION': RESULT = CENTRAL_FOLDER+'AUX_DATA'+DL+'VGT2_CNES_Earth_Sun_correction.txt'
+  'MM01_ECHI'     : RESULT = CENTRAL_FOLDER+'AUX_DATA'+DL+'marine'+dl+'Morel-e-chi-coef-2001.txt'
+  'MOREL_MUD'     : RESULT = CENTRAL_FOLDER+'AUX_DATA'+DL+'marine'+dl+'Morel-mud.txt'
+  'WATER_COEF'    : RESULT = CENTRAL_FOLDER+'AUX_DATA'+DL+'marine'+dl+'water_coef.txt'
+  'REFRACT_INDEX' : RESULT = CENTRAL_FOLDER+'AUX_DATA'+DL+'marine'+dl+'water_refractive_index.txt'
   'SUM'           : RESULT = CENTRAL_FOLDER+'User_Manual.pdf'
-  
+
 ;----------------------
 ; VALUES
 
-  'TOOL'          : RESULT = 'DIMITRI V2.0'
+  'TOOL'          : RESULT = 'DIMITRI V3.0'
     
   ELSE            : BEGIN
                       PRINT, 'ERROR, LOCATION CASE NOT FOUND'
