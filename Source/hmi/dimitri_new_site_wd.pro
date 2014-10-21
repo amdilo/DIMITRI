@@ -280,7 +280,7 @@ PRO DIMITRI_NEW_SITE_WD,VERBOSE=VERBOSE,GROUP_LEADER=GROUP_LEADER
 ;--------------------------------------
 ; DEFINE MESSAGE TITLE AND FORMAT FOR OUTPUT
 
-  MSG_TITLE   = 'DIMITRI V2.0: Site Creator'
+  MSG_TITLE   = 'DIMITRI V3.1: Site Creator'
   SITE_FORMAT = '(2(A,1H;),3(F15.5,1H;),1(F15.5))'
 
 ;------------------------------------ 

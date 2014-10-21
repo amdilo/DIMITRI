@@ -24,12 +24,13 @@
 ;*      DHMI_DATABASE - CONTAINS THE DATABASE DATA FOR THE DIMITRI HMI
 ;*
 ;* MODIFICATION HISTORY:
-;*        31 MAR 2011 - C KENT    - DIMITRI-2 V1.0
-;*        17 MAY 2011 - C KENT    - ADDED PROCESS 2
-;*        20 JUN 2011 - C KENT    - ADDED LINUX ACROBAT READER FOR SUM
-;*        06 JUL 2011 - C KENT    - ADDED DATABASE COMMON BLOCK TO DIMITRI HMI
-;*        01 NOV 2013 - C MAZERAN - ADDED RAYLEIGH AND GLINT VICARIOUS CAL. TO HMI
-;*        17 FEB 2014 - C MAZERAN - ADDED CLOUD MENU, SSV AND BRDF CLOUD SCREENING
+;*        31 MAR 2011 - C KENT       - DIMITRI-2 V1.0
+;*        17 MAY 2011 - C KENT       - ADDED PROCESS 2
+;*        20 JUN 2011 - C KENT       - ADDED LINUX ACROBAT READER FOR SUM
+;*        06 JUL 2011 - C KENT       - ADDED DATABASE COMMON BLOCK TO DIMITRI HMI
+;*        01 NOV 2013 - C MAZERAN    - ADDED RAYLEIGH AND GLINT VICARIOUS CAL. TO HMI
+;*        17 FEB 2014 - C MAZERAN    - ADDED CLOUD MENU, SSV AND BRDF CLOUD SCREENING
+;*        21 OCT 2014 - B ALHAMMOUD  - CHANGED DIMITRI V2.0 TO DIMITRI V3.1
 ;*
 ;* VALIDATION HISTORY:
 ;*        14 APR 2011 - C KENT    - WINDOWS 32-BIT IDL 7.1 AND LINUX 64-BIT IDL 8.0 NOMINAL
@@ -85,11 +86,11 @@ PRO DHMI_BUTTON_EVENT,EVENT
                           ENDCASE  
                         END
     'ABOUT'           : BEGIN
-                          MSG   = [	'DIMITRI Version 3.0','Release Date: 25/02/2013'              ,$
+                          MSG   = [	'DIMITRI Version 3.1','Release Date: 15/10/2014'              ,$
                                     'IDL 8.2.3 Or Higher required','___________________',''             ,$
                                     'Email: ','=> Dimitri@argans.co.uk'                  ,$
                                     'Authors:','=> Marc Bouvet (ESA-ESTEC)','=> Chris Kent (ARGANS Ltd)','=> Dan Marrable (ARGANS Ltd)','=> Constant Mazeran (Solvo)']
-	                        ABOUT = DIALOG_MESSAGE(MSG,/INFORMATION,TITLE = 'DIMITRI V3.0: ABOUT',/CENTER)
+	                        ABOUT = DIALOG_MESSAGE(MSG,/INFORMATION,TITLE = 'DIMITRI V3.1: ABOUT',/CENTER)
                         END
   ENDCASE
 
@@ -178,7 +179,7 @@ COMMON DHMI_DATABASE,DHMI_DB_DATA
 ; DEFINE MAIN WIDGET BASE
 
   IF KEYWORD_SET(VERBOSE) THEN PRINT,'DIMITRI_HMI: DEFINING MAIN HMI WIDGET'
-  DTLB = WIDGET_BASE(XSIZE=XSIZE,YSIZE=YSIZE,XOFFSET=XLOC,YOFFSET=YLOC,TITLE='DIMITRI V3.0',COLUMN=1)
+  DTLB = WIDGET_BASE(XSIZE=XSIZE,YSIZE=YSIZE,XOFFSET=XLOC,YOFFSET=YLOC,TITLE='DIMITRI V3.1',COLUMN=1)
 
 ;---------------------------
 ; ADD DRAW_WIDGET FOR MAIN TITLE IMAGE

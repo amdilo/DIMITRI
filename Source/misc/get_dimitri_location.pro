@@ -104,7 +104,7 @@ FUNCTION GET_DIMITRI_LOCATION,LOCATION,VERBOSE=VERBOSE
 ;----------------------
 ; VALUES
 
-  'TOOL'          : RESULT = 'DIMITRI V3.0'
+  'TOOL'          : RESULT = 'DIMITRI V3.1'
     
   ELSE            : BEGIN
                       PRINT, 'ERROR, LOCATION CASE NOT FOUND'

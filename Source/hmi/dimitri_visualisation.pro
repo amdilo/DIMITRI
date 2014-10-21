@@ -355,7 +355,7 @@ PRO VISU_OBJECT_OPTION,EVENT,VERBOSE=VERBOSE
                               STATS_STRUCT:VISU_INFO.OUTPUTFOLDER     ,$
                               ROW_HEADERS:TEMP_LABEL                  }
     
-             TABLE_BASE    = WIDGET_BASE(MBAR=MENU,TITLE='DIMITRI V2.0 VISU: STATS',$
+             TABLE_BASE    = WIDGET_BASE(MBAR=MENU,TITLE='DIMITRI V3.1 VISU: STATS',$
                                          XSIZE=XSIZE,YSIZE=YSIZE,XOFFSET=XLOC,YOFFSET=YLOC)
              VISU_WD_DLIM  = WIDGET_BUTTON(MENU,      VALUE='||', SENSITIVE=0)
              FILE_MENU     = WIDGET_BUTTON(MENU,      VALUE='File',/MENU)
