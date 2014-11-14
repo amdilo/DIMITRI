@@ -40,6 +40,7 @@
 ;*      05 JAN 2010 - C KENT   - LINUX 64-BIT MACHINE IDL 8.0: COMPILATION SUCCESSFUL,
 ;*                               NO DIFFERENCES OBSERVED AGAINST WINDOWS 32-BIT MACHINE
 ;*
+;*        31 OCT 2014 - B ALHAMMOUD   - VALIDATION OF THE UPDATED VERSION DIMITRI V3.1 
 ;**************************************************************************************
 ;**************************************************************************************
 

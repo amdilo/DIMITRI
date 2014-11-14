@@ -45,6 +45,6 @@ selecting the file
 DIMITRI Team
 ------------------
 - Kathryn Barker (ARGANS)
-- Dan Marrable (ARGANS)
+- Bahjat Alhammoud (ARGANS)
+- Manuel Arias Ballesteros (ARGANS)
 - Marc Bouvet (ESA)
-- Constant Mazeran (Solvo)

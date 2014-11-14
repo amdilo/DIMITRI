@@ -45,6 +45,7 @@
 ;*        01 NOV 2013 - C MAZERAN - LINUX 64-BIT MACHINE IDL 820, NOMINAL COMPILATION AND OPERATION.
 ;*                                  TESTED FOR MERIS, MODISA, PARASOL 
 ;*
+;*        31 OCT 2014 - B ALHAMMOUD   - VALIDATION OF THE UPDATED VERSION DIMITRI V3.1 
 ;**************************************************************************************
 ;**************************************************************************************
 

@@ -5,7 +5,7 @@
 # deltaphi: 0.0 45.0 90.0 135.0 180.0
 # wind: 1.5 5.0 10.0
 # Inner loop is on wind, then deltaphi, thetav, thetas and bands
-# Dimensions: 5 9 9 5 3 
+# Dimensions: 4 9 9 5 3 
 0.035442810926596909
 0.035612403790940148
 0.035715282634508225

@@ -36,6 +36,7 @@
 ;*      12 APR 2011 - C KENT   - NOMINAL COMPILATION AND OPERATION ON WINDOWS 32BIT 
 ;*                               IDL 7.1 AND LINUX 64BIT IDL 8.0
 ;*
+;*      31 OCT 2014 - B ALHAMMOUD   - VALIDATION OF THE UPDATED VERSION DIMITRI V3.1 
 ;**************************************************************************************
 ;**************************************************************************************
 
