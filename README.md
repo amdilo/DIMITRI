@@ -37,10 +37,31 @@ and recompilation of the software package.
 How to use DIMITRI
 ------------------
 
-Following extraction, DIMITRI is now ready to be utilised, this can be achieved by:
-* On Windows: Double clicking the “DIMITRI_V2.0.sav” file, or running IDL runtime and
-selecting the file
-* On Linux: Typing “idl –vm=DIMITRI_V2.0.sav”
+Linux:
+To clone the master branch from GitHub:
+
+git clone https://github.com/dimitri-argans/DIMITRI
+
+*** NOTE: DIMITRI insists on a version number appended to the directory you are running it in ***
+*** The following step is critical ***
+
+# rename the DIMITRI folder to DIMITRI_2.0
+cd ..
+mv DIMITRI DIMITRI_2.0
+cd DIMITRI_2.0
+idl –vm=DIMITRI_V2.0.sav		# 2.0 for master
+
+For the same reason, if you checkout other (development) versions, e.g. dev3.1, change the version number appropriately (e.g. DIMITRI_3.1) before running DIMITRI:
+git checkout 3.1
+cd ..
+mv DIMITRI_2.0 DIMITRI_3.1
+
+
+For further information on DIMITRI, please go to the website:
+
+http://www.argans.co.uk/dimitri
+
+
 
 DIMITRI Team
 ------------------
