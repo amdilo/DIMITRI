@@ -42,19 +42,21 @@ To clone the master branch from GitHub:
 
 git clone https://github.com/dimitri-argans/DIMITRI
 
-*** NOTE: DIMITRI insists on a version number appended to the directory you are running it in ***
-*** The following step is critical ***
+<strong>NOTE: DIMITRI insists on a version number appended to the directory you are running it in.</strong>
 
-# rename the DIMITRI folder to DIMITRI_2.0
-cd ..
-mv DIMITRI DIMITRI_2.0
-cd DIMITRI_2.0
-idl –vm=DIMITRI_V2.0.sav		# 2.0 for master
+<strong>The following step is critical</strong>
+
+    # rename the DIMITRI folder to DIMITRI_2.0
+    cd ..
+    mv DIMITRI DIMITRI_2.0
+    cd DIMITRI_2.0
+    idl –vm=DIMITRI_V2.0.sav		# 2.0 for master
 
 For the same reason, if you checkout other (development) versions, e.g. dev3.1, change the version number appropriately (e.g. DIMITRI_3.1) before running DIMITRI:
-git checkout 3.1
-cd ..
-mv DIMITRI_2.0 DIMITRI_3.1
+
+    git checkout 3.1
+    cd ..
+    mv DIMITRI_2.0 DIMITRI_3.1
 
 
 For further information on DIMITRI, please go to the website:
