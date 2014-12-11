@@ -1,7 +1,7 @@
 ﻿DIMITRI
 =======
 
-Database for Imaging Mulit-spectral Instruments and Tools for Radiometric Intercomparison
+Database for Imaging Multi-spectral Instruments and Tools for Radiometric Intercomparison
 
 Overview
 --------
@@ -66,6 +66,9 @@ http://www.argans.co.uk/dimitri
 DIMITRI Team
 ------------------
 - Kathryn Barker (ARGANS)
-- Dan Marrable (ARGANS)
-- Constant Mazeran (Solvo)
 - Marc Bouvet (ESA)
+- Constant Mazeran (Solvo)
+- Manuel Arias Ballesteros (ARGANS)
+- Bahjat Alhammoud (ARGANS)
+- Kelvin Hunter (ARGANS)
+- John Hedley (ECS)
