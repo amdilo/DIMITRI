@@ -1,0 +1,27 @@
+zout toa
+sza        25.344349
+phi0        233.59280
+umu       0.80313811
+phi        47.042191
+data_files_path /home/bahjat/DIMITRI_3.1.1/libRadtran-1.7/data/
+atmosphere_file midlatitude_summer
+dens_column O3        275.94683
+dens_column H2O    5.4948975e+22
+aerosol_species_library OPAC
+aerosol_default
+aerosol_species_file desert
+aerosol_scale_tau      0.405277
+solar_file kurudz_1.0nm.dat
+wavelength       412.000       473.000
+correlated_k lowtran
+rte_solver mystic
+mc_polarisation
+mc_backward
+mc_vroom on
+mc_photons     1500
+mc_std
+mc_basename mc_simulation_cpu_0
+mc_escape
+reflectivity
+rpv_file /home/bahjat/DIMITRI_3.1.1//AUX_DATA/PICS_BRDF_data/Libya4_interpolated_RPV_model.txt
+quiet

@@ -44,7 +44,7 @@ selecting the file
 
 DIMITRI Team
 ------------------
-- Kathryn Barker (ARGANS)
 - Bahjat Alhammoud (ARGANS)
+- Kathryn Barker (ARGANS)
 - Manuel Arias Ballesteros (ARGANS)
 - Marc Bouvet (ESA)

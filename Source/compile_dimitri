@@ -32,6 +32,8 @@ cd,'../recal/'
 @compile_recal
 cd,'../brdf/'
 @compile_brdf
+cd,'../desert/'
+@compile_desert
 cd,'../toa_simulation/'
 @compile_toa_sim
 cd, '../vicarious/'

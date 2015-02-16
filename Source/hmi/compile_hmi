@@ -10,6 +10,7 @@
 .rnew dhmi_process_2.pro 
 .rnew dhmi_process_3.pro 
 .rnew dhmi_process_4.pro 
+.rnew dhmi_process_5.pro 
 
 .rnew get_dimitri_visualisation_colours.pro
 .rnew get_dimitri_visualisation_colours_brdf.pro 
