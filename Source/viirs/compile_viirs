@@ -1,0 +1,19 @@
+.rnew convert_emissive_to_btemp.pro
+.rnew get_viirs_aux_files.pro
+.rnew get_viirs_date_info.pro
+.rnew get_viirs_viewing_geometries.pro
+.rnew get_viirs_l1b_emissive.pro
+.rnew get_viirs_l1b_emissive_linux.pro
+.rnew get_viirs_l1b_reflectance.pro
+.rnew get_viirs_l1b_radiance.pro
+.rnew get_viirs_l1b_reflectance_linux.pro
+.rnew get_viirs_l1b_radiance_linux.pro
+.rnew get_viirs_lat_lon.pro
+.rnew get_viirs_quicklook.pro
+.rnew get_viirs_quicklook_linux.pro
+.rnew get_viirs_timeseries_plots.pro
+.rnew ingest_viirs_product.pro
+.rnew ingest_viirs_product_linux.pro
+.rnew fix_bowtie.pro
+.rnew calc_lat_lon_distance.pro
+

@@ -21,14 +21,14 @@ can be ingested into DIMITRI to allow even greater temporal and spatial analysis
 System Requirements
 -------------------
 
-A full IDL license is NOT required for DIMITRI V2.0; the freely available IDL Virtual Machine
+A full IDL license is NOT required for DIMITRI V3.0; the freely available IDL Virtual Machine
 (available at http://www.ittvis.com/ProductsServices/IDL/IDLModules/IDLVirtualMachine.aspx) will
 allow use of the pre-compiled DIMITRI package and use of the full functionalities accessible from the
 HMI.
 
 DIMITRI has been developed to be compatible on both Linux and Windows based systems; however,
-MAC compatibility cannot be guaranteed. DIMITRI has been developed for use with IDL 7.1 or
-higher; the minimum requirements required for IDL 7.1 are therefore the minimum requirements for
+MAC compatibility cannot be guaranteed. DIMITRI has been developed for use with IDL 8.2.3 or
+higher; the minimum requirements required for IDL 8.2.3 are therefore the minimum requirements for
 running DIMITRI.
 
 A full IDL license (http://www.ittvis.com) will allow command line usage, modification of routines
@@ -37,6 +37,7 @@ and recompilation of the software package.
 How to use DIMITRI
 ------------------
 
+<<<<<<< HEAD
 Linux:
 To clone the master branch from GitHub:
 
@@ -64,10 +65,21 @@ For further information on DIMITRI, please go to the website:
 http://www.argans.co.uk/dimitri
 
 
+=======
+Following extraction, DIMITRI is now ready to be utilised, this can be achieved by:
+* On Windows: Double clicking the “DIMITRI_V3.sav” file, or running IDL runtime and
+selecting the file
+* On Linux: Typing “idl –vm=DIMITRI_V3.sav”
+>>>>>>> 3.1
 
 DIMITRI Team
 ------------------
 - Kathryn Barker (ARGANS)
+<<<<<<< HEAD
+=======
+- Bahjat Alhammoud (ARGANS)
+- Manuel Arias Ballesteros (ARGANS)
+>>>>>>> 3.1
 - Marc Bouvet (ESA)
 - Constant Mazeran (Solvo)
 - Manuel Arias Ballesteros (ARGANS)

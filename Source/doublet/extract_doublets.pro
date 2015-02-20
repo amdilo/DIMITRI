@@ -318,7 +318,7 @@ FUNCTION EXTRACT_DOUBLETS,OFOLDER,ED_REGION,SENSOR1,PROC_VER1,SENSOR2,PROC_VER2,
                   SENSOR_ALL_DATA[3,*] LT SZA_MAX              AND $
                   SENSOR_ALL_DATA[4,*] GT SAA_MIN              AND $
                   SENSOR_ALL_DATA[4,*] LT SAA_MAX              )                  
-                  
+                 
       IF RES[0] GT -1 THEN begin
       GD_IDX[RES]=1
       GD_AUX[RES,0]=GD_PIX[GD]

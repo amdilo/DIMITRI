@@ -52,6 +52,7 @@
 ;*                                  IDL 8.0, NOMINAL COMPILATION AND OPERATION. TESTED FOR 
 ;*                                  MERIS VS MERIS AND MERIS VS MODIS 
 ;*
+;*       31 OCT 2014 - B ALHAMMOUD   - VALIDATION OF THE UPDATED VERSION DIMITRI V3.1 
 ;**************************************************************************************
 ;**************************************************************************************
 

@@ -6,3 +6,7 @@
 .rnew cloud_module_lcca.pro
 .rnew cloud_module_vgt.pro
 .rnew dimitri_cloud_screening.pro
+.rnew ssv_cloud_screening.pro
+.rnew brdf_cloud_screening.pro
+
+
