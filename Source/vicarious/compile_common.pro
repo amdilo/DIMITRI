@@ -1,3 +1,0 @@
-pro compile_common
-COMMON RTM_LUT, RHOR_LUT, TRA_DOWN_LUT, TRA_UP_LUT, XC_LUT, TAUA_LUT
-end
