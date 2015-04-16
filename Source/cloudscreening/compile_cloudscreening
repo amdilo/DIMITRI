@@ -1,13 +1,17 @@
-
-.rnew dimitri_cloud_screening_bright_rho.pro
-.rnew cs_band_info.pro
-.rnew cloud_module_globcarbon.pro
-.rnew cloud_module_globcarbon_p.pro
-.rnew cloud_module_lcca.pro
-.rnew cloud_module_vgt.pro
-.rnew dimitri_cloud_screening.pro
-.rnew create_db_ct.pro
-.rnew ssv_cloud_screening.pro
-.rnew brdf_cloud_screening.pro
-
-
+.rnew CLOUD_MODIS_CLIMREF_FILTERING.pro
+.rnew DIMITRI_CLOUD_SCREENING.pro
+.rnew DIMITRI_CLOUD_SCREENING_BRIGHT_RHO.pro
+.rnew CS_BAND_INFO.pro
+.rnew CLOUD_MODULE_GLOBCARBON.pro
+.rnew CLOUD_MODULE_GLOBCARBON_P.pro
+.rnew CLOUD_MODULE_LCCA.pro
+.rnew CLOUD_MODULE_ATSR_OCEAN.pro
+.rnew CLOUD_MODULE_ATSR_DESERT.pro
+.rnew CLOUD_MODULE_MERIS_OCEAN.pro
+.rnew CLOUD_MODULE_MERIS_DESERT.pro
+.rnew CLOUD_MODULE_MODISA_OCEAN.pro
+.rnew CLOUD_MODULE_MODISA_DESERT.pro
+.rnew CLOUD_MODULE_PARASOL_OCEAN.pro
+.rnew CLOUD_MODULE_PARASOL_DESERT.pro
+.rnew CLOUD_MODULE_VGT_DESERT.pro
+.rnew CLOUD_MODULE_VGT.pro

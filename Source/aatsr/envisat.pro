@@ -80,7 +80,7 @@ END
 
 
 
-FUNCTION ENVISAT_BILINEAR, P, IX, JY, EXTRAPOLATE=EX
+FUNCTION ENVISAT_BILINEAR, P, IX, JY, EXTRAPOLATE = EX
 ;
 ; VERSION
 ;     1.0  TJN  16-SEP-2002  Original
@@ -109,7 +109,7 @@ FUNCTION ENVISAT_BILINEAR, P, IX, JY, EXTRAPOLATE=EX
 ;
 ; Skip out if extrapolation not required -------------------------
 ;
-  IF NOT KEYWORD_SET(Ex) THEN RETURN, INTERPOLATE(p, ix, jy)
+  IF NOT KEYWORD_SET(EX) THEN RETURN, INTERPOLATE(p, ix, jy)
 ;
 ; Make 'x' indices and offsets -----------------------------------
 ;
@@ -131,6 +131,7 @@ FUNCTION ENVISAT_BILINEAR, P, IX, JY, EXTRAPOLATE=EX
     di * (P[i1, j0] - P[i0, j0]) + $
     dj * (P[i0, j1] - P[i0, j0]) + $
     di * dj * (P[i0, j0] - P[i1, j0] - P[i0, j1] + P[i1, j1])
+    
 END
 
 

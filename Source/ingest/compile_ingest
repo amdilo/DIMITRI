@@ -1,2 +1,7 @@
 
-.rnew dimitri_interface_ingest.pro
+.rnew DIMITRI_INTERFACE_INGEST.pro
+.rnew GET_NCDF_INGEST_STRUCT.pro
+.rnew NETCDFWRITE_INGEST_OUTPUT.pro
+.rnew NETCDFREAD_INGEST_OUTPUT.pro
+.rnew GET_INGESTION_TIMESERIES_PLOTS.pro
+

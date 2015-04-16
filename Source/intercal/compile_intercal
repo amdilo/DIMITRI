@@ -1,5 +1,4 @@
 
-.rnew dimitri_polynomial_fit_function
-.rnew sbaf
-.rnew intercalibrate_doublets
-.rnew dimitri_interface_intercalibration
+.rnew DIMITRI_POLYNOMIAL_FIT_FUNCTION
+.rnew INTERCALIBRATE_DOUBLETS
+.rnew DIMITRI_INTERFACE_INTERCALIBRATION

@@ -1,19 +1,18 @@
 
-.rnew convert_emissive_to_btemp.pro
-.rnew get_modisa_aux_files.pro
-.rnew get_modisa_date_info.pro
-.rnew get_modisa_viewing_geometries.pro
-.rnew get_modisa_l1b_emissive.pro
-.rnew get_modisa_l1b_emissive_linux.pro
-.rnew get_modisa_l1b_reflectance.pro
-.rnew get_modisa_l1b_radiance.pro
-.rnew get_modisa_l1b_reflectance_linux.pro
-.rnew get_modisa_l1b_radiance_linux.pro
-.rnew get_modisa_lat_lon.pro
-.rnew get_modisa_quicklook.pro
-.rnew get_modisa_quicklook_linux.pro
-.rnew get_modisa_timeseries_plots.pro
-.rnew ingest_modisa_product.pro
-.rnew ingest_modisa_product_linux.pro
+.rnew CONVERT_EMISSIVE_TO_BTEMP.pro
+.rnew GET_MODISA_AUX_FILES.pro
+.rnew GET_MODISA_DATE_INFO.pro
+.rnew GET_MODISA_VIEWING_GEOMETRIES.pro
+.rnew GET_MODISA_L1B_EMISSIVE.pro
+.rnew GET_MODISA_L1B_EMISSIVE_LINUX.pro
+.rnew GET_MODISA_L1B_REFLECTANCE.pro
+.rnew GET_MODISA_L1B_RADIANCE.pro
+.rnew GET_MODISA_L1B_REFLECTANCE_LINUX.pro
+.rnew GET_MODISA_L1B_RADIANCE_LINUX.pro
+.rnew GET_MODISA_LAT_LON.pro
+.rnew GET_MODISA_QUICKLOOK.pro
+.rnew GET_MODISA_QUICKLOOK_LINUX.pro
+.rnew INGEST_MODISA_PRODUCT.pro
+.rnew INGEST_MODISA_PRODUCT_LINUX.pro
 
 

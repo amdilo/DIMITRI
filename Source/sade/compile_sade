@@ -1,8 +1,8 @@
-.rnew read_sade_prodfile_text.pro
-.rnew read_sade_txt.pro
-.rnew compute_parasol_viewing_geometries.pro
-.rnew get_parasol_viewing_geometries.pro
-.rnew convert_sade_to_dimitri.pro
-.rnew convert_timeseries_to_sade.pro
-.rnew remove_bad_sade.pro
+.rnew READ_SADE_PRODFILE_TEXT.pro
+.rnew READ_SADE_TXT.pro
+.rnew COMPUTE_PARASOL_VIEWING_GEOMETRIES.pro
+.rnew GET_PARASOL_VIEWING_GEOMETRIES.pro
+.rnew CONVERT_SADE_TO_DIMITRI.pro
+.rnew CONVERT_TIMESERIES_TO_SADE.pro
+.rnew REMOVE_BAD_SADE.pro
 

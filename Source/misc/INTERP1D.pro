@@ -1,0 +1,67 @@
+;**************************************************************************************
+;**************************************************************************************
+;*
+;* NAME:
+;*      INTERP1D
+;*
+;* PURPOSE:
+;*      BASIC LINEAR INTERPOLATION
+;*
+;* CALLING SEQUENCE:
+;*      YQ = INTERP1D(X,Y,XQ)
+;*
+;* INPUTS:
+;*      X = BREAKPOINTS OF THE Y LOOK-UP TABLE
+;*      Y = THE 1D LOOK-UP TABLE
+;*      XQ = REQUESTED X VALUES TO GET CORRESPONDING YQ VALUES IN THE LOOK-UP TABLE
+;;*
+;* KEYWORDS:
+;*      NONE
+;*
+;* OUTPUTS:
+;*      YQ = CORRESPONDING YQ VALUES OF THE LOOK-UP TABLE AT REQUESTED XQ VALUES
+;*
+;* COMMON BLOCKS:
+;*      NONE
+;*
+;* MODIFICATION HISTORY:
+;*        12 MAY 2014 - PML / MAGELLIUM       - CREATION
+;*
+;* VALIDATION HISTORY:
+;*        12 MAY 2014 - PML / MAGELLIUM       - WINDOWS 64-BIT MACHINE / IDL 8.2.3 : COMPILATION AND
+;*                                  CALLING SUCCESSFUL
+;*      20 JAN 2015 - NCG / MAGELLIUM      - WINDOWS 64BIT MACHINE IDL 8.0: COMPILATION AND OPERATION SUCCESSFUL 
+;*      30 MAR 2015 - NCG / MAGELLIUM      - WINDOWS 64BIT MACHINE IDL 8.0: COMPILATION AND OPERATION SUCCESSFUL (DIMITRI V4.0) 
+;*
+;**************************************************************************************
+;**************************************************************************************
+
+
+FUNCTION INTERP1D,X,Y,XQ
+
+  ; GET INPUT DATA DIMENSIONS
+  DIM_XQ = N_ELEMENTS(XQ)-1
+  DIM_X = N_ELEMENTS(X)-1
+  
+  ; SORT FOR MONOTONIC INPUT DATA VERSUS X
+  INDX_SORT=SORT(X)
+  X = X(INDX_SORT)
+  Y = Y(INDX_SORT)
+  
+  ; WALK THROUGH REQUESTED POINTS INTERPOLATING XQ
+  YQ = XQ    ; INTIALIZE YQ IDENTICAL TO XQ (DIMENSION)
+  FOR INDX_XQ = 0L, DIM_XQ DO BEGIN
+    INDX_X = WHERE(X GE XQ(INDX_XQ))
+    INDX_X=INDX_X(0) ; GET FIRST INDEX >= XQ
+    CASE 1 OF
+      INDX_X EQ -1:  YQ(INDX_XQ) = Y(DIM_X) ; SATURATION TO LAST Y VALUE (XQ OUT OF RANGE / TOP LIMIT)
+      INDX_X EQ  0:  YQ(INDX_XQ) = Y(0)     ; SATURATION TO FIRST Y VALUES (XQ OUT OF RANGE / BOTTOM LIMIT)
+      ELSE: BEGIN     ; XQ WITHIN THE X RANGE > DO THE BASIC LINEAR INTERPOLATION BETWEEN TWO BREAKPOINTS
+        SLOPE = (Y(INDX_X) - Y(INDX_X-1))/(X(INDX_X) - X(INDX_X-1))
+        YQ(INDX_XQ) = SLOPE * (XQ(INDX_XQ) - X(INDX_X-1)) + Y(INDX_X-1)  ; LINEAR INTERPOLATION
+      END ; END ELSE
+    ENDCASE
+  ENDFOR
+  RETURN, YQ
+  
+END

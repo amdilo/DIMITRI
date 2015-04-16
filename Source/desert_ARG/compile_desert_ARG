@@ -1,0 +1,8 @@
+.rnew oploterror.pro
+.rnew read_ecmwf_interim.pro
+.rnew read_mystic_output.pro
+.rnew select_best_aerosol.pro
+.rnew valid_rpv_brdf_geometry.pro
+.rnew write_mystic_rpv_input.pro
+.rnew simulate_toa_time_series.pro
+

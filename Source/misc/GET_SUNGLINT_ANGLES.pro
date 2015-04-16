@@ -1,0 +1,54 @@
+;**************************************************************************************
+;**************************************************************************************
+;*
+;* NAME:
+;*      GET_SUNGLINT_ANGLES
+;*
+;* PURPOSE:
+;*      DETERMINATE SUNGLINT ANGLES (THETA_N, THETA_R)
+;*
+;* CALLING SEQUENCE:
+;*      RES = GET_SUNGLINT_ANGLES, SZA, VZA, SAA, VAA, THETA_N=THETA_N, THETA_R=THETA_R
+;*
+;* INPUTS:
+;*      SZA = SUN ZENITH ANGLE
+;*      VZA = VIEWING ZENITH ANGLE
+;*      SAA = SUN AZIMUTH ANGLE
+;*      VAA = VIEWING AZIMUTH ANGLE
+;*
+;* KEYWORDS/OUTPUTS:
+;*      THETA_N  - THETA N ANGLE
+;*      THETA_R  - THETA R ANGLE
+;*
+;* OUTPUTS:
+;*      STATUS   - 1: NOMINAL
+;*
+;* COMMON BLOCKS:
+;*      NONE
+;*
+;* MODIFICATION HISTORY:
+;*      04 DEC 2013 - PML / MAGELLIUM    - CREATION
+;*
+;* VALIDATION HISTORY:
+;*      17 APR 2014 - PML / MAGELLIUM - WINDOWS 64-BIT MACHINE IDL 8.2.3 : COMPILATION AND CALLING SUCCESSFUL
+;*      20 JAN 2015 - NCG / MAGELLIUM      - WINDOWS 64BIT MACHINE IDL 8.0: COMPILATION AND OPERATION SUCCESSFUL 
+;*      30 MAR 2015 - NCG / MAGELLIUM      - WINDOWS 64BIT MACHINE IDL 8.0: COMPILATION AND OPERATION SUCCESSFUL (DIMITRI V4.0) 
+;*
+;**************************************************************************************
+;**************************************************************************************
+
+FUNCTION GET_SUNGLINT_ANGLES, SZA, VZA, SAA, VAA, THETA_N=THETA_N, THETA_R=THETA_R
+
+  DPHI = SAA - VAA;
+  COSTHETA_R = SIN(SZA*!DTOR)*SIN(VZA*!DTOR) * COS((DPHI+180)*!DTOR) + COS(VZA*!DTOR)*COS(SZA*!DTOR);
+  THETA_R = ACOS(COSTHETA_R)*!RADEG
+  
+  COSTHETA_R2 = SIN(SZA*!DTOR)*SIN(VZA*!DTOR) * COS(DPHI*!DTOR) + COS(VZA*!DTOR)*COS(SZA*!DTOR);
+  THETA_R2 = ACOS(COSTHETA_R2)*!RADEG
+
+  COSTHETA_N = (COS(VZA*!DTOR)+COS(SZA*!DTOR))/(2*COS(THETA_R2*!DTOR/2))
+  THETA_N = ACOS(COSTHETA_N)*!RADEG
+  
+  RETURN, GET_DIMITRI_LOCATION('STATUS_OK')
+  
+END

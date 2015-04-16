@@ -1,0 +1,74 @@
+;**************************************************************************************
+;**************************************************************************************
+;*
+;* NAME:
+;*      GET_EOS_SENSOR_AND_6S      
+;* 
+;* PURPOSE:
+;*      RETURNS THE EOS STRUCTURE 
+;* 
+;* CALLING SEQUENCE:
+;*      RES = GET_EOS_SENSOR_AND_6S(SENSOR)      
+;* 
+;* INPUTS:
+;*      SENSOR    - A STRING OF THE SENSOR NAME (E.G. 'MERIS')
+;*
+;* KEYWORDS:
+;*      VERBOSE   - PROCESSING STATUS OUTPUTS
+;*
+;* OUTPUTS:
+;*      EOS_STRUCTURE - A STRUCTURE FIELDS
+;*               - BAND_NUMBER : BAND NUMBER
+;*               - CENTRAL_WL  :  CENTRAL WAVELENGTH VALUE
+;*               - EOS_SENSOR  : EOS SENSOR
+;*               - EOS_6S      : EOS 6S
+;*                          
+;* COMMON BLOCKS:
+;*      NONE
+;*
+;* MODIFICATION HISTORY:
+;*      16 DEC 2014 - NCG / MAGELLIUM   - DIMITRI-3.0 MAG
+;*
+;* VALIDATION HISTORY:
+;*      20 JAN 2015 - NCG / MAGELLIUM      - WINDOWS 64BIT MACHINE IDL 8.0: COMPILATION AND OPERATION SUCCESSFUL 
+;*      30 MAR 2015 - NCG / MAGELLIUM      - WINDOWS 64BIT MACHINE IDL 8.0: COMPILATION AND OPERATION SUCCESSFUL (DIMITRI V4.0) 
+;*
+;**************************************************************************************
+;**************************************************************************************
+
+FUNCTION GET_EOS_SENSOR_AND_6S, SENSOR, VERBOSE=VERBOSE
+
+  STATUS_ERROR = GET_DIMITRI_LOCATION('STATUS_ERROR')
+
+;------------------------------------
+; DEFINE SENSOR FILE
+  
+  EOS_SENSOR_AND_6S_FILE = GET_DIMITRI_LOCATION('EOS_SENSOR_AND_6S')
+  
+  RES = FILE_INFO(EOS_SENSOR_AND_6S_FILE)
+  IF RES.EXISTS EQ 0 THEN BEGIN
+    IF KEYWORD_SET(VERBOSE) THEN PRINT, 'GET_EOS_SENSOR_AND_6S: ERROR, SPECTRAL RESPONSE FILE NOT FOUND'
+    RETURN, STATUS_ERROR
+  ENDIF
+
+;------------------------------------
+; RETRIEVE TEMPLATE AND READ DATA FILE  
+  
+  EOS_TEMPLATE = GET_EOS_SENSOR_AND_6S_TEMPLATE(VERBOSE=VERBOSE)
+  EOS_DATA = READ_ASCII(EOS_SENSOR_AND_6S_FILE,TEMPLATE=EOS_TEMPLATE)
+  
+  IDX = WHERE( EOS_DATA.SENSOR EQ STRUPCASE(SENSOR), COUNT )
+  
+  IF COUNT EQ 0 THEN BEGIN
+    IF KEYWORD_SET(VERBOSE) THEN PRINT, 'GET_EOS_SENSOR_AND_6S: ERROR, SENSOR NOT AVAILABLE'
+    RETURN, STATUS_ERROR
+  ENDIF
+  
+  RETURN, { BAND_NUMBER : EOS_DATA.BAND_NUMBER(IDX) , $
+            CENTRAL_WV : EOS_DATA.CENTRAL_WV(IDX), $
+            EOS_SENSOR : EOS_DATA.EOS_SENSOR(IDX), $
+            EOS_6S : EOS_DATA.EOS_6S(IDX) }
+
+END
+
+

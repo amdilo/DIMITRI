@@ -6,7 +6,7 @@ PRO PLOT_DIMITRI_DOUBLETS,OUTPUT_FOLDER,DIMITRI_BAND,Region,DB_REF_SENSOR,DB_REF
   RES = FILE_INFO(OUTPUT_FOLDER)
   IF RES.EXISTS EQ 0 THEN BEGIN
     PRINT,"PLOT_DIMITRI_DOUBLETS: OUTPUT FOLDER DOESN'T EXIST"
-    RETURN,-1
+    RETURN
   ENDIF
   
   RES = STRSPLIT(OFOLDER,'\',/EXTRACT)
@@ -18,8 +18,13 @@ PRO PLOT_DIMITRI_DOUBLETS,OUTPUT_FOLDER,DIMITRI_BAND,Region,DB_REF_SENSOR,DB_REF
 
   RES = FILE_SEARCH(ed_folder,str1)
   res2 = FILE_SEARCH(ed_folder,str2)
-  if res[0] eq '' or res2[0] eq '' then return,-1
-  if n_elements(res) ne n_elements(res2) then return,-1
+  IF res[0] EQ '' OR res2[0] EQ '' THEN BEGIN
+    RETURN
+  ENDIF
+  
+  IF n_elements(res) NE n_elements(res2) THEN BEGIN
+    RETURN
+  ENDIF
 
 ;get sensor index correcponding to dimitri index
 
@@ -120,7 +125,7 @@ for i=0,4 do begin
 ytmp = min(all_data[*,*,i+1],max=ytmp2)
   RSR_yrange[0,i] = ytmp>0.0<100.0
   RSR_yrange[1,i]= ytmp2>0.0<100.0
-endif
+endfor
 
 ;------------------------------------ 
 ; CREATE THE PALETTE OBJECT

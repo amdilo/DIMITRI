@@ -34,11 +34,7 @@
 
 PRO REMOVE_BAD_SADE,SITE,SENSOR,PROC_VER,PRODFILE
 
-  ;IFOL = '/mnt/Projects/MEREMSII/WG_Reference_Dataset_2/'
-  CASE STRUPCASE(!VERSION.OS_FAMILY) OF 
-  'WINDOWS': IFOL = 'R:\MEREMSII\WG_Reference_Dataset\'
-  'UNIX':    IFOL = '/mnt/Projects/MEREMSII/WG_Reference_Dataset/'
-  ENDCASE
+  IFOL = '/mnt/Projects/MEREMSII/WG_Reference_Dataset_2/'
   DL = PATH_SEP()
   OUPUTFILE = IFOL+SITE+DL+SITE+'_'+SENSOR+'_'+PROC_VER+'_cleaned.SADE'
 

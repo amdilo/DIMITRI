@@ -1,0 +1,119 @@
+;**************************************************************************************
+;**************************************************************************************
+;*
+;* NAME:
+;*      GET_NCDF_INGEST_STRUCT       
+;* 
+;* PURPOSE:
+;*      GET THE STRUCTURE WHICH CORRESPONDS TO THE INGESTION OUTPUT NCDF FILES
+;* 
+;* CALLING SEQUENCE:
+;*      RES = GET_NCDF_INGEST_STRUCT(INGEST_REGION,INGEST_SENSOR,INGEST_PROC_VER)      
+;* 
+;* INPUTS:
+;*      ROI_PIXEL_NUMBER  = PIXEL NUMBER OF THE ROI
+;*      VIEWDIR_NUMBER    = VIEWING DIRECTION NUMBER OF THE SENSOR
+;*      BAND_NUMBER       = BAND NUMBER OF THE SENSOR
+;*
+;* KEYWORDS:
+;*      VERBOSE  - PROCESSING STATUS OUTPUTS
+;*
+;* OUTPUTS:
+;*      STRUCTURE ASSOCIATED TO THE NCDF INGESTION OUTPUT FILE
+;*
+;* COMMON BLOCKS:
+;*      NONE
+;*
+;* MODIFICATION HISTORY:
+;*      29 JAN 2015 - NCG / MAGELLIUM - CREATION (DIMITRI V4.0)
+;*
+;* VALIDATION HISTORY:
+;*      30 MAR 2015 - NCG / MAGELLIUM      - WINDOWS 64BIT MACHINE IDL 8.0: COMPILATION AND OPERATION SUCCESSFUL (DIMITRI V4.0) 
+;*
+;**************************************************************************************
+;**************************************************************************************
+FUNCTION GET_NCDF_INGEST_STRUCT, ROI_PIXEL_NUMBER, VIEWDIR_NUMBER, BAND_NUMBER, VERBOSE=VERBOSE
+
+  IF KEYWORD_SET(VERBOSE) THEN PRINT, 'GET_NCDF_INGEST_STRUCT: START'
+  
+  MISSING_VALUE = GET_DIMITRI_LOCATION('NCDF_MISSING_VALUE')
+  
+  CALDAT, SYSTIME(/UTC,/JULIAN),TMM,TDD,TYY,THR,TMN,TSS
+
+  TYY = STRTRIM(STRING(TYY),2)
+  TMM = TMM LT 10 ? '0'+STRTRIM(STRING(TMM),2) : STRTRIM(STRING(TMM),2)
+  TDD = TDD LT 10 ? '0'+STRTRIM(STRING(TDD),2) : STRTRIM(STRING(TDD),2)
+  THR = THR LT 10 ? '0'+STRTRIM(STRING(THR),2) : STRTRIM(STRING(THR),2)
+  TMN = TMN LT 10 ? '0'+STRTRIM(STRING(TMN),2) : STRTRIM(STRING(TMN),2)
+  TSS = TSS LT 10 ? '0'+STRTRIM(STRING(TSS,FORMAT='(I)'),2) : STRTRIM(STRING(TSS,FORMAT='(I)'),2)
+
+  CDATE = TYY+TMM+TDD+' '+THR+':'+TMN+':'+TSS
+  MDATE = CDATE
+
+  GLOBAL_ATT = { $
+                  TOOL : GET_DIMITRI_LOCATION('TOOL'), $
+                  CREATION_TIME           : CDATE, $
+                  MODIFICATION_TIME       : MDATE, $ 
+                  SITE_NAME               : '-1', $ 
+                  SITE_TYPE               : '-1', $ 
+                  SITE_COORDINATES        : '-1', $ 
+                  SENSOR                  : '-1', $ 
+                  PROCESSING_VERSION      : '-1', $ 
+                  ACQUISITION_DATE        : '-1', $ 
+                  L1_FILENAME             : '-1', $ 
+                  ROI_PIX_NUM             : LONG(-1), $ 
+                  AUTO_CS_1_NAME          : GET_DIMITRI_LOCATION('AUTO_CS_1_NAME'), $ 
+                  AUTO_CS_1_MEAN          : FLOAT(-1), $ 
+                  ROI_CS_1_CLEAR_PIX_NUM  : LONG(-1), $ 
+                  AUTO_CS_2_NAME          : GET_DIMITRI_LOCATION('AUTO_CS_2_NAME'), $ 
+                  AUTO_CS_2_MEAN          : FLOAT(-1), $ 
+                  ROI_CS_2_CLEAR_PIX_NUM  : LONG(-1), $ 
+                  BRDF_CS_MEAN            : FLOAT(-1), $ 
+                  SSV_CS_MEAN             : FLOAT(-1), $ 
+                  MANUAL_CS               : FLOAT(-1) } 
+                  
+  DIMENSIONS = { $
+                  ROI_PIXEL_NUMBER        : LONG(ROI_PIXEL_NUMBER), $
+                  VIEWDIR_NUMBER          : LONG(VIEWDIR_NUMBER)  }
+
+  VARIABLES = { $ 
+                  ROI_STATUS              : LONARR(VIEWDIR_NUMBER), $
+                  ROI_PIXEL_NUMBER        : LONARR(VIEWDIR_NUMBER), $
+                  LAT                     : MAKE_ARRAY(ROI_PIXEL_NUMBER, VIEWDIR_NUMBER, /FLOAT, VALUE=MISSING_VALUE), $
+                  LON                     : MAKE_ARRAY(ROI_PIXEL_NUMBER, VIEWDIR_NUMBER, /FLOAT, VALUE=MISSING_VALUE), $
+                  SZA                     : MAKE_ARRAY(ROI_PIXEL_NUMBER, VIEWDIR_NUMBER, /FLOAT, VALUE=MISSING_VALUE), $
+                  SAA                     : MAKE_ARRAY(ROI_PIXEL_NUMBER, VIEWDIR_NUMBER, /FLOAT, VALUE=MISSING_VALUE), $
+                  VZA                     : MAKE_ARRAY(ROI_PIXEL_NUMBER, VIEWDIR_NUMBER, /FLOAT, VALUE=MISSING_VALUE), $
+                  VAA                     : MAKE_ARRAY(ROI_PIXEL_NUMBER, VIEWDIR_NUMBER, /FLOAT, VALUE=MISSING_VALUE), $
+                  REFL_BAND               : MAKE_ARRAY(ROI_PIXEL_NUMBER, VIEWDIR_NUMBER, BAND_NUMBER, /FLOAT, VALUE=MISSING_VALUE), $
+                  PIXEL_COLUMN_INDICE     : MAKE_ARRAY(ROI_PIXEL_NUMBER, VIEWDIR_NUMBER, /LONG, VALUE=MISSING_VALUE), $
+                  PIXEL_ROW_INDICE        : MAKE_ARRAY(ROI_PIXEL_NUMBER, VIEWDIR_NUMBER, /LONG, VALUE=MISSING_VALUE), $
+                  AUTO_CS_1_VALID_INDEX   : MAKE_ARRAY(ROI_PIXEL_NUMBER, VIEWDIR_NUMBER, /LONG, VALUE=MISSING_VALUE), $
+                  AUTO_CS_2_VALID_INDEX   : MAKE_ARRAY(ROI_PIXEL_NUMBER, VIEWDIR_NUMBER, /LONG, VALUE=MISSING_VALUE), $
+                  AUTO_CS_1_MASK          : MAKE_ARRAY(ROI_PIXEL_NUMBER, VIEWDIR_NUMBER, /LONG, VALUE=MISSING_VALUE), $
+                  AUTO_CS_2_MASK          : MAKE_ARRAY(ROI_PIXEL_NUMBER, VIEWDIR_NUMBER, /LONG, VALUE=MISSING_VALUE), $
+                  ERA_WIND_SPEED          : MAKE_ARRAY(ROI_PIXEL_NUMBER, VIEWDIR_NUMBER, /FLOAT, VALUE=MISSING_VALUE), $
+                  ERA_WIND_DIR            : MAKE_ARRAY(ROI_PIXEL_NUMBER, VIEWDIR_NUMBER, /FLOAT, VALUE=MISSING_VALUE), $
+                  ERA_OZONE               : MAKE_ARRAY(ROI_PIXEL_NUMBER, VIEWDIR_NUMBER, /FLOAT, VALUE=MISSING_VALUE), $
+                  ERA_PRESSURE            : MAKE_ARRAY(ROI_PIXEL_NUMBER, VIEWDIR_NUMBER, /FLOAT, VALUE=MISSING_VALUE), $
+                  ERA_WATERVAPOUR         : MAKE_ARRAY(ROI_PIXEL_NUMBER, VIEWDIR_NUMBER, /FLOAT, VALUE=MISSING_VALUE), $
+                  ESA_CHLOROPHYLL         : MAKE_ARRAY(ROI_PIXEL_NUMBER, VIEWDIR_NUMBER, /FLOAT, VALUE=MISSING_VALUE) }
+
+  VARIABLES_ATT = { $ 
+                  THETA_N_MEAN            : FLOAT(MISSING_VALUE), $
+                  THETA_R_MEAN            : FLOAT(MISSING_VALUE), $
+                  ERA_WIND_SPEED_MEAN_L1_AUX    : MAKE_ARRAY(VIEWDIR_NUMBER, /FLOAT, VALUE=MISSING_VALUE), $
+                  ERA_WIND_DIR_MEAN_L1_AUX      : MAKE_ARRAY(VIEWDIR_NUMBER, /FLOAT, VALUE=MISSING_VALUE), $
+                  ERA_OZONE_MEAN_L1_AUX         : MAKE_ARRAY(VIEWDIR_NUMBER, /FLOAT, VALUE=MISSING_VALUE), $
+                  ERA_PRESSURE_MEAN_L1_AUX      : MAKE_ARRAY(VIEWDIR_NUMBER, /FLOAT, VALUE=MISSING_VALUE), $
+                  ERA_WATERVAPOUR_MEAN_L1_AUX   : MAKE_ARRAY(VIEWDIR_NUMBER, /FLOAT, VALUE=MISSING_VALUE), $
+                  ESA_CHLOROPHYLL_MEAN_L1_AUX   : MAKE_ARRAY(VIEWDIR_NUMBER, /FLOAT, VALUE=MISSING_VALUE) }
+
+  NCDF_INGEST_STRUCT = { GLOBAL_ATT : GLOBAL_ATT, DIMENSIONS : DIMENSIONS, VARIABLES : VARIABLES, VARIABLES_ATT : VARIABLES_ATT }
+
+  
+  IF KEYWORD_SET(VERBOSE) THEN PRINT, 'GET_NCDF_INGEST_STRUCT: END'
+  
+  RETURN, NCDF_INGEST_STRUCT
+  
+END

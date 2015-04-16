@@ -1,3 +1,3 @@
-pro compile_common
-common dhmi_database,dhmi_db_data
-end
+PRO COMPILE_COMMON
+COMMON DHMI_DATABASE, DHMI_DB_DATA
+END

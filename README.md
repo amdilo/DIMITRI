@@ -1,4 +1,4 @@
-﻿DIMITRI
+DIMITRI
 =======
 
 Database for Imaging Mulit-spectral Instruments and Tools for Radiometric Intercomparison
@@ -7,7 +7,7 @@ Overview
 --------
 
 The DIMITRI software package contains a suite of IDL routines for the intercomparison of Top Of
-Atmosphere (TOA) radiance and reflectance values within the 400nm - 4μm wavelength range; this
+Atmosphere (TOA) radiance and reflectance values within the 400nm - 4?m wavelength range; this
 is generally known as Level 1b Earth Observation (EO) satellite data. The package includes product
 reader and data extraction routines, and allows comparison of satellite data based on User defined
 cloud screening parameters as well as temporal, spatial and geometric matching. DIMITRI is a
@@ -21,7 +21,7 @@ can be ingested into DIMITRI to allow even greater temporal and spatial analysis
 System Requirements
 -------------------
 
-A full IDL license is NOT required for DIMITRI V3.0; the freely available IDL Virtual Machine
+A full IDL license is NOT required for DIMITRI V4.0; the freely available IDL Virtual Machine
 (available at http://www.ittvis.com/ProductsServices/IDL/IDLModules/IDLVirtualMachine.aspx) will
 allow use of the pre-compiled DIMITRI package and use of the full functionalities accessible from the
 HMI.
@@ -38,12 +38,14 @@ How to use DIMITRI
 ------------------
 
 Following extraction, DIMITRI is now ready to be utilised, this can be achieved by:
-* On Windows: Double clicking the “DIMITRI_V3.sav” file, or running IDL runtime and
+* On Windows: Double clicking the “DIMITRI_V4.0.sav” file, or running IDL runtime and
 selecting the file
-* On Linux: Typing “idl –vm=DIMITRI_V3.sav”
+* On Linux: Typing “idl –vm=DIMITRI_V4.0.sav”
 
 DIMITRI Team
 ------------------
+- Beatrice Berthelot (MAGELLIUM)
+- Nathalie Camlong (MAGELLIUM)
 - Bahjat Alhammoud (ARGANS)
 - Kathryn Barker (ARGANS)
 - Manuel Arias Ballesteros (ARGANS)

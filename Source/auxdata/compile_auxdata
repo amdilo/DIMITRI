@@ -1,0 +1,5 @@
+.rnew UV_2_WS_WD.pro
+.rnew GET_COORD_RANGE.pro
+.rnew NETCDFREAD_INTERPOL_AUXDATA.pro
+.rnew GET_METEO_AUX_DATA.pro
+.rnew GET_ALL_METEO_AUX_DATA.pro

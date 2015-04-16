@@ -1,47 +1,71 @@
+print, 'dimitri compilation start'
 RESOLVE_ALL
-
+print, ' ./MISC'
 cd,'./misc/'
 @compile_misc
+print, ' ../DATABASE'
 cd,'../database/'
 @compile_database
+print, ' ../CLOUDSCREENING'
 cd,'../cloudscreening/'
 @compile_cloudscreening
+print, ' ../calibration'
+cd,'../calibration/'
+@compile_calibration
+print, ' ../CALIBRATION_MAG'
+cd,'../calibration_MAG/'
+@compile_calibration_MAG
+print, ' ../CALIBRATION_ARG'
+cd,'../calibration_ARG/'
+@compile_calibration_ARG
+print, ' ../DESERT_ARG/'
+cd,'../desert_ARG/'
+@compile_desert_ARG
+print, ' ../AUXDATA/'
+cd,'../auxdata/'
+@compile_auxdata
+print, ' ../AATSR/'
 cd,'../aatsr/'
 @compile_aatsr
+print, ' ../ATSR2/'
 cd,'../atsr2/'
 @compile_atsr2
+print, ' ../MERIS/'
 cd,'../meris/'
 @compile_meris
+print, ' ../MODISA/'
 cd,'../modisa/'
 @compile_modisa
+print, ' ../PARASOL/'
 cd,'../parasol/'
 @compile_parasol
+print, ' ../VEGETATION/'
 cd,'../vegetation/'
 @compile_vegetation
-cd, '../viirs/'
-@compile_viirs
+print, ' ../INGEST/'
 cd,'../ingest/'
 @compile_ingest
+print, ' ../SADE/'
 cd,'../sade/'
 @compile_sade
+print, ' ../DOUBLET/'
 cd,'../doublet/'
 @compile_doublet
+print, ' ../INTERCAL/'
 cd,'../intercal/'
 @compile_intercal
+print, ' ../RECAL/'
 cd,'../recal/'
 @compile_recal
+print, ' ../BRDF/'
 cd,'../brdf/'
 @compile_brdf
-cd,'../desert/'
-@compile_desert
-cd,'../toa_simulation/'
-@compile_toa_sim
-cd, '../vicarious/'
-@compile_vicarious
+print, ' ../HMI/'
 cd,'../hmi/'
 @compile_hmi
 cd,'..'
 RESOLVE_ALL
 
-
-save,/routines,filename='../DIMITRI_V3.sav'
+save,/routines,filename='../DIMITRI_V4.0.sav'
+cd,'..'
+print, 'dimitri compilation end'

@@ -20,9 +20,7 @@ PRO DIMITRI_SADE_INTERFACE_ROUTINES_P1
 
   MAIN_DIR          = GET_DIMITRI_LOCATION('DIMITRI');FULL PATH OF THE MAIN DIMITRI DIRECTORY
   OFOLDER           = FILEPATH('',root_dir = MAIN_DIR, subdir=['Output','VGT_TEST_2']) ; FULL PATH OF THE OUTPUT FOLDER TO BE CREATED
-  ;REGION            = 'Niger2'                            ; VALIDATION SITE NAME
-  REGION            = 'DomeC'                            ; VALIDATION SITE NAME
-  ;REGION            = 'Libya4'                            ; VALIDATION SITE NAME
+  REGION            = 'Niger2'                            ; VALIDATION SITE NAME
   SENSOR1           = 'MERIS'                             ; REFERENCE SENSOR
   PROC_VER1         = '2nd_Reprocessing'                  ; REFERENCE SENSOR PROCESSING VERSION
   SENSOR2S          = ['MODISA','PARASOL']                  ; CALIBRATION SENSORs - insert as many as you wish
@@ -37,17 +35,15 @@ PRO DIMITRI_SADE_INTERFACE_ROUTINES_P1
   SZA_MAX           = 90.                                 ; SZA MAX ANGLE (DEGREES)
   SAA_MIN           = 0.                                  ; SAA MIN ANGLE (DEGREES)
   SAA_MAX           = 360.                                ; SAA MAX ANGLE (DEGREES)
-  ;SADE_DIR          = '/mnt/Projects/MEREMSII/WG_Reference_Dataset_2/distributable_files/' ;CHANGE THIS TO THE LOCATION OF YOUR SADE FILES (NOTE, REGION SUBDIRECTORY IN FILEPATH BELOW
-  CASE STRUPCASE(!VERSION.OS_FAMILY) OF 
-  'WINDOWS': SADE_DIR = 'R:\MEREMSII\WG_Reference_Dataset\distributable_files\'
-  'UNIX':    SADE_DIR = '/mnt/Projects/MEREMSII/WG_Reference_Dataset/distributable_files/'
-  ENDCASE
+  SADE_DIR          = '/mnt/Projects/MEREMSII/WG_Reference_Dataset_2/distributable_files/' ;CHANGE THIS TO THE LOCATION OF YOUR SADE FILES (NOTE, REGION SUBDIRECTORY IN FILEPATH BELOW
 
   FOR IVOS=0,N_ELEMENTS(SENSOR2S)-1 DO BEGIN
     SENSOR2   = SENSOR2S[IVOS]
     PROC_VER2 = PROC_VER2S[IVOS]
     SADE1           = FILEPATH(REGION+'_'+SENSOR1+'_'+PROC_VER1+'.SADE',ROOT_DIR=SADE_DIR,SUBDIR=[REGION]); FULL PATH TO THE SADE FILE FOR THE REFERENCE SENSOR
     SADE2           = FILEPATH(REGION+'_'+SENSOR2+'_'+PROC_VER2+'.SADE',ROOT_DIR=SADE_DIR,SUBDIR=[REGION]); FULL PATH TO THE SADE FILE FOR THE CALIBRATION SENSOR
+    ;SADE1           = FILEPATH('Niger2_'+SENSOR1+'_'+PROC_VER1+'.SADE',ROOT_DIR=SADE_DIR,SUBDIR=['Niger2']); FULL PATH TO THE SADE FILE FOR THE REFERENCE SENSOR
+    ;SADE2           = FILEPATH('Niger2_'+SENSOR2+'_'+PROC_VER2+'.SADE',ROOT_DIR=SADE_DIR,SUBDIR=['Niger2']); FULL PATH TO THE SADE FILE FOR THE CALIBRATION SENSOR
 
 
 ;----------------------------

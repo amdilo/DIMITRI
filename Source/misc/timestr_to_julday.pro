@@ -5,7 +5,7 @@
 ;******************************************************************************************************
 FUNCTION TIMESTR_TO_JULDAY,TIMESTR
 
-    months = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC']
+    MONTHS = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC']
 
     NP = N_ELEMENTS(TIMESTR)
 
@@ -15,13 +15,13 @@ FUNCTION TIMESTR_TO_JULDAY,TIMESTR
        JDAY = 0.0D
 
     FOR I = 0, NP-1 DO BEGIN
-       day = fix(strmid(timestr(i),0,2))
-       mon = strupcase(strmid(timestr(i),3,3))
-       year = fix(strmid(timestr(i),7,4))
-       hrs = fix(strmid(timestr(i),12,2))
-       mins = fix(strmid(timestr(i),15,2))
-       secs = fix(strmid(timestr(i),18,2))
-       jday(i) = julday(where(months eq mon)+1,day,year,hrs,mins,secs)
+       DAY = FIX(STRMID(TIMESTR(I),0,2))
+       MON = STRUPCASE(STRMID(TIMESTR(I),3,3))
+       YEAR = FIX(STRMID(TIMESTR(I),7,4))
+       HRS = FIX(STRMID(TIMESTR(I),12,2))
+       MINS = FIX(STRMID(TIMESTR(I),15,2))
+       SECS = FIX(STRMID(TIMESTR(I),18,2))
+       JDAY(I) = JULDAY(WHERE(MONTHS EQ MON)+1,DAY,YEAR,HRS,MINS,SECS)
     ENDFOR
 
     RETURN,JDAY

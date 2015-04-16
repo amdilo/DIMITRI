@@ -24,7 +24,6 @@
 ;*
 ;* MODIFICATION HISTORY:
 ;*      13 JUN 2012 - C KENT   - DIMITRI-2 V1.0
-;*      03 Aug 2012 - K Barker   UPDATE: User Manual added to .tar
 ;*
 ;* VALIDATION HISTORY:
 ;*
@@ -35,8 +34,8 @@ PRO CREATE_NEW_DIMITRI_TAR
 
 ; DEFINE INPUT AND OUTPUT FOLDER LOCATIONS
   
-  IFOLDER = '/mnt/Projects/MEREMSII/DIMITRI/20120305/'
-  OFOLDER = '/mnt/Projects/MEREMSII/DIMITRI/new_dist/'; update this location to where you want the new distribution to be 
+  IFOLDER = '/net/s10test2/zak/mbouvet/DIMITRI_V2_final_delivery/'
+  OFOLDER = '~/DIMITRI/'; update this location to where you want the new distribution to be 
   DIMITRI = 'DIMITRI_2.0'
   DL = PATH_SEP()
   STIME = SYSTIME()
@@ -46,17 +45,16 @@ PRO CREATE_NEW_DIMITRI_TAR
   IF ~FILE_TEST(OFOLDER)         THEN FILE_MKDIR,OFOLDER
   IF ~FILE_TEST(OFOLDER+DIMITRI) THEN FILE_MKDIR,OFOLDER+DIMITRI
 
-; COPY BIN, AUX DATA, OUTPUT FOLDERS, DIMITRI SAV + User Manual
+; COPY BIN, AUX DATA, OUTPUT FOLDERS + DIMITRI SAV
 
-  SPAWN, 'cp -rf '+IFOLDER+DIMITRI+DL+'User_Manual.pdf '+OFOLDER+DIMITRI+DL
   SPAWN, 'cp -rf '+IFOLDER+DIMITRI+DL+'AUX_DATA '+OFOLDER+DIMITRI+DL
   SPAWN, 'cp -rf '+IFOLDER+DIMITRI+DL+'Bin '+OFOLDER+DIMITRI+DL
   SPAWN, 'cp -rf '+IFOLDER+DIMITRI+DL+'DIMITRI_V2.sav '+OFOLDER+DIMITRI+DL
   IF ~FILE_TEST(OFOLDER+DIMITRI+DL+'Output') THEN FILE_MKDIR,OFOLDER+DIMITRI+DL+'Output'  
   IF ~FILE_TEST(OFOLDER+DIMITRI+DL+'Input')  THEN FILE_MKDIR,OFOLDER+DIMITRI+DL+'Input' 
   SPAWN, 'cp -rf '+IFOLDER+DIMITRI+DL+'Source '+OFOLDER+DIMITRI+DL
-  FILE_DELETE,OFOLDER+DIMITRI+DL+'Source'+DL+'.git',/RECURSIVE
-  FILE_DELETE,OFOLDER+DIMITRI+DL+'Source'+DL+'validation',/RECURSIVE  
+  ;FILE_DELETE,OFOLDER+DIMITRI+DL+'Source'+DL+'.git',/RECURSIVE
+  ;FILE_DELETE,OFOLDER+DIMITRI+DL+'Source'+DL+'validation',/RECURSIVE  
 
   SITES     = ['Amazon','BOUSSOLE','DomeC','Libya4','SIO','SPG','TuzGolu','Uyuni']
   SENSORS   = ['AATSR','ATSR2','MERIS','MERIS','MODISA','PARASOL','VEGETATION']
@@ -121,9 +119,9 @@ PRO CREATE_NEW_DIMITRI_TAR
 
   PRINT
   PRINT,'**********************************'
-  PRINT,'*   COMPLETED DIMITRI TAR        *'
-  PRINT,'*   S: '+STIME+'  *'
-  PRINT,'*   E: '+SYSTIME()+'  *'
+  PRINT,'*   COMPLETED DIMITRI TAR        *
+  PRINT,'*   S: '+STIME+'  *
+  PRINT,'*   E: '+SYSTIME()+'  *
   PRINT,'**********************************'
     
 END

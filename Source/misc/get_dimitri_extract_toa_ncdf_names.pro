@@ -81,8 +81,10 @@ FUNCTION GET_DIMITRI_EXTRACT_TOA_NCDF_NAMES,VERBOSE=VERBOSE
               VAR_RHOMU_LONG :'Mean reflectance over site'        ,$
               VAR_RHOSD_TITLE:'site_stdev'                        ,$
               VAR_RHOSD_LONG :'Standard Deviation of reflectance over site'               ,$
-              VAR_CLOUD_TITLE_AUT:'cloud_fraction_auto'                                   ,$
-              VAR_CLOUD_LONG_AUT :'Automated cloud screening percentage'                  ,$
+              VAR_CLOUD_TITLE_AUT_1:'cloud_fraction_auto_1'                                   ,$
+              VAR_CLOUD_LONG_AUT_1 :'ARGANS Automated cloud screening percentage'                  ,$
+              VAR_CLOUD_TITLE_AUT_2:'cloud_fraction_auto_2'                                   ,$
+              VAR_CLOUD_LONG_AUT_2 :'MAGELLIUM Automated cloud screening percentage'                  ,$
               VAR_CLOUD_TITLE_MAN:'cloud_fraction_manual'                                 ,$
               VAR_CLOUD_LONG_MAN :'Manual cloud screening: not performed (-1)/clear(0)/cloudy(1)/suspect(2)'  ,$
               VAR_VZA_TITLE:'mean_viewing_zenith_angle'                                   ,$
