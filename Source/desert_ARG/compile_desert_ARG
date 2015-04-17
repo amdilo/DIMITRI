@@ -4,5 +4,5 @@
 .rnew select_best_aerosol.pro
 .rnew valid_rpv_brdf_geometry.pro
 .rnew write_mystic_rpv_input.pro
-.rnew simulate_toa_time_series.pro
+.rnew DIMITRI_INTERFACE_DESERT_ARG.pro
 

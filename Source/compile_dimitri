@@ -60,6 +60,9 @@ cd,'../recal/'
 print, ' ../BRDF/'
 cd,'../brdf/'
 @compile_brdf
+print, ' ../TOA_SIMULATION/'
+cd,'../toa_simulation/'
+@compile_toa_sim
 print, ' ../HMI/'
 cd,'../hmi/'
 @compile_hmi

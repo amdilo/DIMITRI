@@ -12,9 +12,9 @@
 .rnew compute_e_chi.pro
 .rnew compute_mud.pro
 .rnew r0_mm01.pro
-.rnew rayleigh_calibration.pro
+.rnew DIMITRI_INTERFACE_RAYLEIGH_ARG.pro
 .rnew taur_ht74.pro
 .rnew fresnel.pro
 .rnew inv_rho_glint_cm54.pro
-.rnew glint_calibration.pro
+.rnew DIMITRI_INTERFACE_SUNGLINT_ARG.pro
 
