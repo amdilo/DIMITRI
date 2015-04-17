@@ -76,7 +76,6 @@ FUNCTION GET_DIMITRI_LOCATION,LOCATION,VERBOSE=VERBOSE
   'RSR'           : RESULT = CENTRAL_FOLDER+'AUX_DATA'+DL+'spectral_response'+DL
   'RSR_DIM'       : RESULT = CENTRAL_FOLDER+'AUX_DATA'+DL+'spectral_response'+DL+'DIMITRI_Sites'+DL  
   'RSR_USR'       : RESULT = CENTRAL_FOLDER+'AUX_DATA'+DL+'spectral_response'+DL+'USER_Sites'+DL
-  'MARINE'        : RESULT = CENTRAL_FOLDER+'AUX_DATA'+DL+'marine'+DL
   'RTM'           : RESULT = CENTRAL_FOLDER+'AUX_DATA'+DL+'RTM'+DL
   'BIN'           : RESULT = CENTRAL_FOLDER+'Bin'+DL
   'DB_BACKUP'     : RESULT = CENTRAL_FOLDER+'Bin'+DL+'DB_backup'+DL
