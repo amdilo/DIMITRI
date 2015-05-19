@@ -44,11 +44,11 @@
 ;*        20 JAN 2014 - C MAZERAN - ADDED SPECTRAL REFRACTIVE INDEX FOR FRESNEL REFLECTANCE
 ;*        16 MAR 2015 - NCG / MAGELLIUM - UPDATED WITH NCDF INPUT/OUTPUT INTERFACES 
 ;*                                  AND LOOPS ON PRODUCTS/VIEWING DIRECTIONS (DIMITRI V4)
-;*        13 MAR 2015 - NCG / MAGELLIUM - REMOVE USE OF CLIM FILES (files under AUX_DATA/marine folder)
+;*        13 APR 2015 - NCG / MAGELLIUM - REMOVE USE OF CLIM FILES (files under AUX_DATA/marine folder)
 ;*
 ;* VALIDATION HISTORY:
 ;*        01 NOV 2013 - C MAZERAN - LINUX 64-BIT MACHINE IDL 8.0, NOMINAL COMPILATION AND OPERATION.
-;*      30 MAR 2015 - NCG / MAGELLIUM      - WINDOWS 64BIT MACHINE IDL 8.0: COMPILATION AND OPERATION SUCCESSFUL (DIMITRI V4.0) 
+;*       	30 MAR 2015 - NCG / MAGELLIUM      - WINDOWS 64BIT MACHINE IDL 8.0: COMPILATION AND OPERATION SUCCESSFUL (DIMITRI V4.0) 
 ;*
 ;**************************************************************************************
 ;**************************************************************************************

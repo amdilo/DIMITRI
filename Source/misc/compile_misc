@@ -20,6 +20,7 @@
 .rnew DIMITRI_ANGLE_CORRECTOR.pro
 .rnew CLOUD_LOCALSTD.pro
 
+.rnew ninterpolate.pro
 .rnew QUANTIZE_BOL_TOL.pro
 .rnew INTERP1D.pro
 .rnew INTERP1D_MULTIY.pro
@@ -27,7 +28,6 @@
 .rnew INTERP4D.pro
 .rnew INTERP5D.pro
 .rnew INTERP6D.pro
-.rnew INTERP7D.pro
 .rnew LINSPACE.pro
 
 .rnew GET_DIMITRI_EXTRACT_NCDF_DATA_STRUCTURE.pro
