@@ -37,7 +37,10 @@
 .rnew DIMITRI_DATABASE_STATS_WD.pro 
 .rnew DIMITRI_DOWNLOAD_WD.pro 
 .rnew DIMITRI_NEW_SITE_WD.pro 
- 
+
+.rnew DHMI_SSV_CS.pro
+.rnew DHMI_BRDF_CS.pro
+
 ;.rnew PLOT_DIMITRI_DOUBLETS.pro 
 ;.rnew PLOT_DIMITRI_SENSOR_RSR_OLD.pro 
 

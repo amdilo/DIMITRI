@@ -6,6 +6,9 @@ cd,'./misc/'
 print, ' ../DATABASE'
 cd,'../database/'
 @compile_database
+print, ' ../BRDF/'
+cd,'../brdf/'
+@compile_brdf
 print, ' ../CLOUDSCREENING'
 cd,'../cloudscreening/'
 @compile_cloudscreening
@@ -57,9 +60,6 @@ cd,'../intercal/'
 print, ' ../RECAL/'
 cd,'../recal/'
 @compile_recal
-print, ' ../BRDF/'
-cd,'../brdf/'
-@compile_brdf
 print, ' ../TOA_SIMULATION/'
 cd,'../toa_simulation/'
 @compile_toa_sim
@@ -69,6 +69,6 @@ cd,'../hmi/'
 cd,'..'
 RESOLVE_ALL
 
-save,/routines,filename='../DIMITRI_V4.0.sav'
+save,/routines,filename='../DIMITRI_V4.sav'
 cd,'..'
 print, 'dimitri compilation end'

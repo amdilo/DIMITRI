@@ -1,6 +1,0 @@
-Aerosol
-Chlorophyll
-Ozone
-Pressure
-Wind
-WaterVapour

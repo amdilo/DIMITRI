@@ -1,6 +1,7 @@
+.rnew DATETIME_TO_DECIMAL_YEAR.pro
+.rnew get_dimitri_spectra_template.pro
 .rnew GET_DIMITRI_BAND_INDEX_TEMPLATE.pro
 .rnew EXTRACT_DIMITRI_RSR.pro 
-.rnew CONVERT_TIME_TO_JDAY.pro 
 .rnew GET_DIMITRI_LOCATION.pro
 .rnew GET_PRODUCT_IDENTIFIERS.pro
 .rnew GET_HISTOGRAM.pro 
@@ -10,7 +11,6 @@
 .rnew GREAT_CIRCLE_DISTANCE.pro 
 .rnew CHECK_ROI_COVERAGE.pro
 .rnew TIMESTR_TO_JULDAY.pro
-.rnew JULDAY_TO_TIMESTR.pro 
 .rnew MPCURVEFIT.pro 
 .rnew MPFIT.pro
 .rnew GET_DIMITRI_RSR_TEMPLATE.pro 
@@ -53,7 +53,6 @@
 .rnew GET_RAYLEIGH_LUTS.pro
 .rnew GET_SUNGLINT_LUTS.pro
 .rnew GET_SUNGLINT_ANGLES.pro
-.rnew GET_SUNGLINT_BAND_NAME.pro
 .rnew SENSOR_DIRECTION_INFO.pro
 
 .rnew SAVE_DIMITRI_CONFIGURATION.pro 
@@ -61,7 +60,6 @@
 .rnew SENSOR_PIXEL_SIZE.pro
 .rnew SENSOR_DIRECTION_INFO.pro
 .rnew idlgrlegend__define.pro
-.rnew RESOLVE_EVERY.pro
 
 .rnew GET_NCDF_GLOBAL_ATT.pro
 .rnew GET_CHANNEL_STRUCT.pro
@@ -75,9 +73,6 @@
 
 .rnew GET_SPECTRAL_RESPONSE_TEMPLATE.pro
 .rnew GET_SPECTRAL_RESPONSE.pro
-
-.rnew GET_EOS_SENSOR_AND_6S_TEMPLATE.pro
-.rnew GET_EOS_SENSOR_AND_6S.pro
 
 .rnew GET_SOLAR_IRRADIANCE_TEMPLATE.pro
 .rnew GET_SOLAR_IRRADIANCE.pro
